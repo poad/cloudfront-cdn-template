@@ -1,0 +1,31 @@
+{
+  "app": "yarn lint && npx ts-node --prefer-ts-exts bin/cloudfront-cdn-template.ts",
+  "watch": {
+    "include": [
+      "**"
+    ],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "**/*.d.ts",
+      "**/*.js",
+      "tsconfig.json",
+      "package*.json",
+      "yarn.lock",
+      "node_modules",
+      "test"
+    ]
+  },
+  "requireApproval": "never",
+  "context": {
+    "config": {
+      "stackName": "cloudfront-cdn-template",
+      "bucketName": "cloudfront-cdn-template",
+      "cloudfront": {
+        "comment": "for CDN template",
+        "functionName": "index-forward"
+      },
+      "s3Encryption": false
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "cloudfront-cdn-template",
+  "version": "0.1.0",
+  "bin": "bin/cloudfront-cdn-template.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "lint": "eslint --ext .ts function bin lib",
+    "style-check": "prettier --write function bin lib",
+    "format": "prettier --write function bin lib",
+    "fix": "prettier --write function bin lib && eslint --fix --ext .ts function bin lib"
+  },
+  "devDependencies": {
+    "@swc/core": "*",
+    "@swc/helpers": "*",
+    "@types/node": "*",
+    "@types/prettier": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "aws-cdk": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-config-airbnb-typescript": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-prettier": "*",
+    "prettier": "*",
+    "regenerator-runtime": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "*",
+    "constructs": "*",
+    "source-map-support": "*"
+  },
+  "packageManager": "yarn@3.3.0"
+}

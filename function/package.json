@@ -1,0 +1,17 @@
+{
+  "name": "@cloudfront-cdn-template/function",
+  "version": "0.1.0",
+  "bin": "bin/cloudfront-cdn-template.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint --ext .ts lambda bin lib",
+    "style-check": "prettier --write lambda bin lib",
+    "format": "prettier --write lambda bin lib",
+    "fix": "prettier --write lambda bin lib && eslint --fix --ext .ts lambda bin lib"
+  },
+  "devDependencies": {
+    "typescript": "*"
+  },
+  "packageManager": "yarn@3.3.0"
+}
