@@ -3,8 +3,6 @@ import { Construct } from 'constructs';
 import * as kms from 'aws-cdk-lib/aws-kms';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
-import path = require('path');
-import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
 import { PolicyStatement, ServicePrincipal } from 'aws-cdk-lib/aws-iam';
 import * as iam from 'aws-cdk-lib/aws-iam';
 
@@ -78,7 +76,6 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       },
     );
 
-    // eslint-disable-next-line no-new
     const cf = new cloudfront.CloudFrontWebDistribution(this, 'CloudFront', {
       comment,
       originConfigs: [
