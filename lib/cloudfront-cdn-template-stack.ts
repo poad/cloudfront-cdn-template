@@ -11,6 +11,7 @@ interface CloudfrontCdnTemplateStackProps extends cdk.StackProps {
   cloudfront: {
     comment: string;
     functionName: string;
+    originAccessControlResourceName: string;
   };
   s3Encryption?: boolean;
 }
@@ -25,7 +26,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
 
     const {
       bucketName,
-      cloudfront: { comment, functionName },
+      cloudfront: { comment, functionName, originAccessControlResourceName },
       s3Encryption,
     } = props;
 
@@ -68,7 +69,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       'OriginAccessControl',
       {
         originAccessControlConfig: {
-          name: 'OAC',
+          name: originAccessControlResourceName,
           originAccessControlOriginType: 's3',
           signingBehavior: 'no-override',
           signingProtocol: 'sigv4',
