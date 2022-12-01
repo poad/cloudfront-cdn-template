@@ -6,9 +6,9 @@ __metadata:
   cacheKey: 8
 
 "@aws-cdk/asset-awscli-v1@npm:^2.2.9":
-  version: 2.2.23
-  resolution: "@aws-cdk/asset-awscli-v1@npm:2.2.23"
-  checksum: 565705958b7269fc14e9b63df686f18f6505dface332a4eb2cd30c20e146c10a06c43bff9950d6128de9fc1657810f3c65bb31e1b1d181d24b8c5daad6a4e89f
+  version: 2.2.24
+  resolution: "@aws-cdk/asset-awscli-v1@npm:2.2.24"
+  checksum: 7d871ba5941d46b7e686c440b1b9ec880e87175ee7ede821d6320d4ed48bc76b15a87b961b9ad0a93700e433e003a2bc85c1d00dd0062ab315d0910963e90b5b
   languageName: node
   linkType: hard
 
@@ -162,90 +162,90 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-darwin-arm64@npm:1.3.20"
+"@swc/core-darwin-arm64@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-darwin-arm64@npm:1.3.21"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-darwin-x64@npm:1.3.20"
+"@swc/core-darwin-x64@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-darwin-x64@npm:1.3.21"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm-gnueabihf@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.20"
+"@swc/core-linux-arm-gnueabihf@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.21"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.20"
+"@swc/core-linux-arm64-gnu@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.21"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-linux-arm64-musl@npm:1.3.20"
+"@swc/core-linux-arm64-musl@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.21"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-linux-x64-gnu@npm:1.3.20"
+"@swc/core-linux-x64-gnu@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.21"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-linux-x64-musl@npm:1.3.20"
+"@swc/core-linux-x64-musl@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.21"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.20"
+"@swc/core-win32-arm64-msvc@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.21"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.20"
+"@swc/core-win32-ia32-msvc@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.21"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:1.3.20":
-  version: 1.3.20
-  resolution: "@swc/core-win32-x64-msvc@npm:1.3.20"
+"@swc/core-win32-x64-msvc@npm:1.3.21":
+  version: 1.3.21
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.21"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
 "@swc/core@npm:*":
-  version: 1.3.20
-  resolution: "@swc/core@npm:1.3.20"
+  version: 1.3.21
+  resolution: "@swc/core@npm:1.3.21"
   dependencies:
-    "@swc/core-darwin-arm64": 1.3.20
-    "@swc/core-darwin-x64": 1.3.20
-    "@swc/core-linux-arm-gnueabihf": 1.3.20
-    "@swc/core-linux-arm64-gnu": 1.3.20
-    "@swc/core-linux-arm64-musl": 1.3.20
-    "@swc/core-linux-x64-gnu": 1.3.20
-    "@swc/core-linux-x64-musl": 1.3.20
-    "@swc/core-win32-arm64-msvc": 1.3.20
-    "@swc/core-win32-ia32-msvc": 1.3.20
-    "@swc/core-win32-x64-msvc": 1.3.20
+    "@swc/core-darwin-arm64": 1.3.21
+    "@swc/core-darwin-x64": 1.3.21
+    "@swc/core-linux-arm-gnueabihf": 1.3.21
+    "@swc/core-linux-arm64-gnu": 1.3.21
+    "@swc/core-linux-arm64-musl": 1.3.21
+    "@swc/core-linux-x64-gnu": 1.3.21
+    "@swc/core-linux-x64-musl": 1.3.21
+    "@swc/core-win32-arm64-msvc": 1.3.21
+    "@swc/core-win32-ia32-msvc": 1.3.21
+    "@swc/core-win32-x64-msvc": 1.3.21
   dependenciesMeta:
     "@swc/core-darwin-arm64":
       optional: true
@@ -269,7 +269,7 @@ __metadata:
       optional: true
   bin:
     swcx: run_swcx.js
-  checksum: 646c37e3521f04cd08061ab67a4388959e4b234c38eba2eb9fe0fd615dedb6ff9412264789e58af7c2d24b3e5a7ea456efd060e3760d7a91509234b5b5983ad7
+  checksum: c66cd9320c595c68b87c8d90dc9a978099dd25a84c5e9795a8c7fec95fecdd8481da82076a828880a226ad2c0e57155c0a2b97768e99dee042a74182056bda46
   languageName: node
   linkType: hard
 
@@ -332,9 +332,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 18.11.9
-  resolution: "@types/node@npm:18.11.9"
-  checksum: cc0aae109e9b7adefc32eecb838d6fad931663bb06484b5e9cbbbf74865c721b03d16fd8d74ad90e31dbe093d956a7c2c306ba5429ba0c00f3f7505103d7a496
+  version: 18.11.10
+  resolution: "@types/node@npm:18.11.10"
+  checksum: 0f60cb090b2ee91fcd3dc4311bc1ed7889b92f14644c0069f100776f86474c12eebbcc6c75bc0d7d96b975a103b4d5d6b3c22b4e88bea6e7f4e2b1bb0daf5ea8
   languageName: node
   linkType: hard
 
@@ -861,9 +861,9 @@ __metadata:
   linkType: hard
 
 "constructs@npm:*":
-  version: 10.1.175
-  resolution: "constructs@npm:10.1.175"
-  checksum: 3606d36409fa3a77c911d561af80b4d5fb341679554f8e80ce0eff06cefd7a1b2de1dd0edb3430a79b69c1b24c70b37d02c09e88deb691d8d808fc3f30e0adb8
+  version: 10.1.176
+  resolution: "constructs@npm:10.1.176"
+  checksum: f19dfc986c41247eb2d462ac4c814ea1268510429c31f4267ab1a25d11ca87fee0d2683ba82cb48efad80b9356517746aafc1d995b8f1222bc5797c5f0e95967
   languageName: node
   linkType: hard
 
@@ -2111,11 +2111,11 @@ __metadata:
   linkType: hard
 
 "minimatch@npm:^5.0.1":
-  version: 5.1.0
-  resolution: "minimatch@npm:5.1.0"
+  version: 5.1.1
+  resolution: "minimatch@npm:5.1.1"
   dependencies:
     brace-expansion: ^2.0.1
-  checksum: 15ce53d31a06361e8b7a629501b5c75491bc2b59712d53e802b1987121d91b433d73fcc5be92974fde66b2b51d8fb28d75a9ae900d249feb792bb1ba2a4f0a90
+  checksum: 215edd0978320a3354188f84a537d45841f2449af4df4379f79b9b777e71aa4f5722cc9d1717eabd2a70d38ef76ab7b708d24d83ea6a6c909dfd8833de98b437
   languageName: node
   linkType: hard
 
