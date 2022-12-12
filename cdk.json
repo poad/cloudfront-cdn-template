@@ -26,7 +26,7 @@
         "functionName": "index-forward",
         "originAccessControlResourceName": "cloudfront-cdn-template-oac"
       },
-      "s3Encryption": false
+      "s3Encryption": true
     }
   }
 }

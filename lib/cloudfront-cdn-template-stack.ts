@@ -3,7 +3,6 @@ import { Construct } from 'constructs';
 import * as kms from 'aws-cdk-lib/aws-kms';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
-import { PolicyStatement, ServicePrincipal } from 'aws-cdk-lib/aws-iam';
 import * as iam from 'aws-cdk-lib/aws-iam';
 
 interface CloudfrontCdnTemplateStackProps extends cdk.StackProps {
@@ -30,17 +29,14 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       s3Encryption,
     } = props;
 
-    const resolveKmsKey = () => {
+    const resolveEncryption = () => {
       if (s3Encryption) {
-        return new kms.Key(this, 'Key', {
-          enableKeyRotation: true,
-          removalPolicy: cdk.RemovalPolicy.DESTROY,
-        });
+        return s3.BucketEncryption.S3_MANAGED;
       }
       return undefined;
     };
 
-    const encryptionKey = resolveKmsKey();
+    const encryption = resolveEncryption();
 
     const s3bucket = new s3.Bucket(this, 'S3Bucket', {
       bucketName,
@@ -49,7 +45,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       autoDeleteObjects: true,
       accessControl: s3.BucketAccessControl.PRIVATE,
       publicReadAccess: false,
-      encryptionKey,
+      encryption,
     });
 
     // CloudFront Functionリソースの定義
@@ -107,10 +103,10 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
     });
     s3bucket.addToResourcePolicy(
-      new PolicyStatement({
+      new iam.PolicyStatement({
         sid: 'AllowCloudFrontServicePrincipalReadOnly',
         effect: iam.Effect.ALLOW,
-        principals: [new ServicePrincipal('cloudfront.amazonaws.com')],
+        principals: [new iam.ServicePrincipal('cloudfront.amazonaws.com')],
         actions: ['s3:GetObject'],
         resources: [`${s3bucket.bucketArn}/*`],
         conditions: {
@@ -131,21 +127,9 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       '',
     );
 
-    if (encryptionKey) {
-      s3bucket.addToResourcePolicy(
-        new PolicyStatement({
-          sid: 'Allow use of the key',
-          effect: iam.Effect.ALLOW,
-          principals: [new ServicePrincipal('cloudfront.amazonaws.com')],
-          actions: ['kms:Decrypt', 'kms:Encrypt', 'kms:GenerateDataKey*'],
-          resources: ['*'],
-          conditions: {
-            StringEquals: {
-              'AWS:SourceArn': `arn:aws:cloudfront::${this.account}:distribution/${cf.distributionId}`,
-            },
-          },
-        }),
-      );
-    }
+    // eslint-disable-next-line no-new
+    new cdk.CfnOutput(this, 'AccessURLOutput', {
+      value: `https://${cf.distributionDomainName}`
+    })
   }
 }
