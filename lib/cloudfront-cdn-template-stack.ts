@@ -5,11 +5,13 @@ import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as iam from 'aws-cdk-lib/aws-iam';
 
-interface CloudfrontCdnTemplateStackProps extends cdk.StackProps {
+export interface CloudfrontCdnTemplateStackProps extends cdk.StackProps {
   bucketName: string;
   cloudfront: {
     comment: string;
-    functionName: string;
+    functionConfig?: {
+      functionName: string;
+    };
     originAccessControlResourceName: string;
   };
   s3Encryption?: boolean;
@@ -25,7 +27,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
 
     const {
       bucketName,
-      cloudfront: { comment, functionName, originAccessControlResourceName },
+      cloudfront: { comment, functionConfig, originAccessControlResourceName },
       s3Encryption,
     } = props;
 
@@ -45,20 +47,32 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       autoDeleteObjects: true,
       accessControl: s3.BucketAccessControl.PRIVATE,
       publicReadAccess: false,
+      websiteIndexDocument: !functionConfig ? 'index.html': undefined,
       encryption,
     });
 
     // CloudFront Functionリソースの定義
-    const websiteIndexPageForwardFunction = new cloudfront.Function(
-      this,
-      'WebsiteIndexPageForwardFunction',
-      {
-        functionName,
-        code: cloudfront.FunctionCode.fromFile({
-          filePath: 'function/index.js',
-        }),
-      },
-    );
+    const functionAssociationsResolver = () => {
+      if (functionConfig) {
+        const websiteIndexPageForwardFunction = new cloudfront.Function(
+          this,
+          'WebsiteIndexPageForwardFunction',
+          {
+            functionName: functionConfig.functionName,
+            code: cloudfront.FunctionCode.fromFile({
+              filePath: 'function/index.js',
+            }),
+          },
+        );
+        return [
+          {
+            eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
+            function: websiteIndexPageForwardFunction,
+          },
+        ]
+      }
+      return [];
+    };
 
     const oac = new cloudfront.CfnOriginAccessControl(
       this,
@@ -84,12 +98,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
             {
               isDefaultBehavior: true,
               compress: true,
-              functionAssociations: [
-                {
-                  eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
-                  function: websiteIndexPageForwardFunction,
-                },
-              ],
+              functionAssociations: functionAssociationsResolver(),
               cachedMethods: cloudfront.CloudFrontAllowedCachedMethods.GET_HEAD,
               viewerProtocolPolicy:
                 cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,

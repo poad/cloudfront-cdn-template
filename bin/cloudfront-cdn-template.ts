@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { CloudfrontCdnTemplateStack } from '../lib/cloudfront-cdn-template-stack';
+import { CloudfrontCdnTemplateStack, CloudfrontCdnTemplateStackProps } from '../lib/cloudfront-cdn-template-stack';
 import { compileBundles } from '../lib/process/setup';
-
-compileBundles();
 
 const app = new cdk.App();
 const config = app.node.tryGetContext('config');
+
+if ((config as CloudfrontCdnTemplateStackProps).cloudfront.functionConfig) {
+  compileBundles();
+}
+
 const stack = new CloudfrontCdnTemplateStack(app, config.stackName, {
   ...config,
   env: {
