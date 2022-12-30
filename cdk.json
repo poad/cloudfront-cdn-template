@@ -23,7 +23,9 @@
       "bucketName": "cloudfront-cdn-template",
       "cloudfront": {
         "comment": "for CDN template",
-        "functionName": "index-forward",
+        "functionConfig": {
+          "functionName": "index-forward"
+        },
         "originAccessControlResourceName": "cloudfront-cdn-template-oac"
       },
       "s3Encryption": true
