@@ -6,9 +6,9 @@ __metadata:
   cacheKey: 8
 
 "@aws-cdk/asset-awscli-v1@npm:^2.2.30":
-  version: 2.2.45
-  resolution: "@aws-cdk/asset-awscli-v1@npm:2.2.45"
-  checksum: e3c2af2a69efbf151412c83c2d10e965c6ed8366e201edb0a3ff9122d3e3e9b8d185364d97e7a306b75c4ec01f13d8a296fd5ef35543b0563c8d0d314ab6bb5d
+  version: 2.2.47
+  resolution: "@aws-cdk/asset-awscli-v1@npm:2.2.47"
+  checksum: 5f279cacd5968bf2da4e9fd45c8fad2d2b341c729b7d1efd2020a34a14f07910845fdc3910555d8784da6185e0cc0b17c79628eb8acc3549ec0d8dba4986d28b
   languageName: node
   linkType: hard
 
@@ -861,9 +861,9 @@ __metadata:
   linkType: hard
 
 "constructs@npm:*":
-  version: 10.1.204
-  resolution: "constructs@npm:10.1.204"
-  checksum: 594f59f4385bae9eebc53573f130a7ae969ff10d730994e2106a0c94e28139feddd637d272f7846d809283b5c23b0e191142353ccb3dc9f8747a4ee837840e10
+  version: 10.1.207
+  resolution: "constructs@npm:10.1.207"
+  checksum: c087c7928cd3e579ef10a12c5b06a8ec60435a7d8915208e0e53d3d1a8304ef7bccccdf937d048345a9259f3b03085884cc65ba59a3dbf92d5f0622017083528
   languageName: node
   linkType: hard
 
@@ -1156,8 +1156,8 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-jest@npm:*":
-  version: 27.1.7
-  resolution: "eslint-plugin-jest@npm:27.1.7"
+  version: 27.2.0
+  resolution: "eslint-plugin-jest@npm:27.2.0"
   dependencies:
     "@typescript-eslint/utils": ^5.10.0
   peerDependencies:
@@ -1168,7 +1168,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: 1173e60450d8fa7a913d654e80e26176cc64c35f287d680d6fe4187a53974fd8c6883749924c8ea2a9328e295cba4d1be0b3047492653270e9341da1a3fec580
+  checksum: 83554bb8eed289f903e2e03871a42a9b7b37b5e443d4a1501a42e004db49cddad894592ccec9840221b412ea3d2388428a1b11938031e5628d21c5a3210f1240
   languageName: node
   linkType: hard
 
@@ -1373,11 +1373,11 @@ __metadata:
   linkType: hard
 
 "fastq@npm:^1.6.0":
-  version: 1.14.0
-  resolution: "fastq@npm:1.14.0"
+  version: 1.15.0
+  resolution: "fastq@npm:1.15.0"
   dependencies:
     reusify: ^1.0.4
-  checksum: da2c05ec1446ef77b8ba2b76619c90d483404f5087e71e77469fbee797280a1f4ef26a63be15b2377198bc20d09fdf25c7d6e1e492a1e568a29dfdd9bcb7538c
+  checksum: 0170e6bfcd5d57a70412440b8ef600da6de3b2a6c5966aeaf0a852d542daff506a0ee92d6de7679d1de82e644bce69d7a574a6c93f0b03964b5337eed75ada1a
   languageName: node
   linkType: hard
 
@@ -1991,11 +1991,11 @@ __metadata:
   linkType: hard
 
 "json5@npm:>=2.2.2":
-  version: 2.2.2
-  resolution: "json5@npm:2.2.2"
+  version: 2.2.3
+  resolution: "json5@npm:2.2.3"
   bin:
     json5: lib/cli.js
-  checksum: 9a878d66b72157b073cf0017f3e5d93ec209fa5943abcb38d37a54b208917c166bd473c26a24695e67a016ce65759aeb89946592991f8f9174fb96c8e2492683
+  checksum: 2a7436a93393830bce797d4626275152e37e877b265e94ca69c99e3d20c2b9dab021279146a39cdb700e71b2dd32a4cebd1514cd57cee102b1af906ce5040349
   languageName: node
   linkType: hard
 
