@@ -6,6 +6,7 @@ import * as iam from 'aws-cdk-lib/aws-iam';
 
 export interface CloudfrontCdnTemplateStackProps extends cdk.StackProps {
   bucketName: string;
+  environment?: string;
   cloudfront: {
     comment: string;
     functionConfig?: {
@@ -26,6 +27,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
 
     const {
       bucketName,
+      environment,
       cloudfront: { comment, functionConfig, originAccessControlResourceName },
       s3Encryption,
     } = props;
@@ -53,11 +55,12 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
     // CloudFront Functionリソースの定義
     const functionAssociationsResolver = () => {
       if (functionConfig) {
+        const functionName = environment ? `${environment}-${functionConfig.functionName}` : functionConfig.functionName;
         const websiteIndexPageForwardFunction = new cloudfront.Function(
           this,
           'WebsiteIndexPageForwardFunction',
           {
-            functionName: functionConfig.functionName,
+            functionName,
             code: cloudfront.FunctionCode.fromFile({
               filePath: 'function/index.js',
             }),

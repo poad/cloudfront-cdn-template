@@ -7,12 +7,17 @@ import { compileBundles } from '../lib/process/setup';
 const app = new cdk.App();
 const config = app.node.tryGetContext('config');
 
+const env = app.node.tryGetContext('env');
+
 if ((config as CloudfrontCdnTemplateStackProps).cloudfront.functionConfig) {
   compileBundles();
 }
 
-const stack = new CloudfrontCdnTemplateStack(app, config.stackName, {
+const stackName = env ? `${env}-${config.stackName}` : config.stackName;
+
+const stack = new CloudfrontCdnTemplateStack(app, stackName, {
   ...config,
+  environment: env,
   env: {
     account: app.account,
     region: app.region,
