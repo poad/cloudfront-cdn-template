@@ -18,17 +18,74 @@
   },
   "requireApproval": "never",
   "context": {
-    "config": {
+    "default": {
       "stackName": "cloudfront-cdn-template",
       "bucketName": "cloudfront-cdn-template",
       "cloudfront": {
         "comment": "for CDN template",
-        "functionConfig": {
-          "functionName": "index-forward"
-        },
-        "originAccessControlResourceName": "cloudfront-cdn-template-oac"
+        "originAccessControl": {
+          "functionConfig": {
+            "name": "index-forward"
+          },
+          "name": "cloudfront-cdn-template-oac"
+        }
+      }
+    },
+    "dev1": {
+      "stackName": "dev1-cloudfront-cdn-template",
+      "bucketName": "dev1-cloudfront-cdn-template",
+      "cloudfront": {
+        "comment": "for CDN template (dev1)"
+      }
+    },
+    "dev2": {
+      "stackName": "dev2-cloudfront-cdn-template",
+      "bucketName": "dev2-cloudfront-cdn-template",
+      "cloudfront": {
+        "comment": "for CDN template (dev2)",
+        "originAccessControl": {
+          "functionConfig": {
+            "name": "dev2-index-forward"
+          },
+          "name": "dev2-cloudfront-cdn-template-oac"
+        }
       },
-      "s3Encryption": true
+      "kms": {
+        "createKey": true
+      }
+    },
+    "dev3": {
+      "stackName": "dev3-cloudfront-cdn-template",
+      "bucketName": "dev3-cloudfront-cdn-template",
+      "cloudfront": {
+        "comment": "for CDN template (dev3)",
+        "originAccessControl": {
+          "functionConfig": {
+            "name": "dev3-index-forward"
+          },
+          "name": "dev3-cloudfront-cdn-template-oac"
+        }
+      },
+      "kms": {
+        "alias": "aws/s3"
+      }
+    },
+    "dev4": {
+      "stackName": "dev4-cloudfront-cdn-template",
+      "bucketName": "dev4-cloudfront-cdn-template",
+      "cloudfront": {
+        "comment": "for CDN template (dev4)",
+        "originAccessControl": {
+          "functionConfig": {
+            "name": "dev4-index-forward"
+          },
+          "name": "dev4-cloudfront-cdn-template-oac"
+        }
+      },
+      "kms": {
+        "createKey": true,
+        "alias": "test/cloudfront"
+      }
     }
   }
 }

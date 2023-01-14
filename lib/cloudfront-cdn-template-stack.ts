@@ -3,18 +3,30 @@ import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as kms from 'aws-cdk-lib/aws-kms';
+import { compileBundles } from './process/setup';
 
-export interface CloudfrontCdnTemplateStackProps extends cdk.StackProps {
+export interface Config extends cdk.StackProps {
   bucketName: string;
-  environment?: string;
   cloudfront: {
     comment: string;
-    functionConfig?: {
-      functionName: string;
+    originAccessControl?: {
+      functionConfig: {
+        name: string;
+        arn?: string;
+      };
+      name: string;
     };
-    originAccessControlResourceName: string;
   };
-  s3Encryption?: boolean;
+  kms?: {
+    arn?: string;
+    alias?: string;
+    createKey?: boolean;
+  };
+}
+
+interface CloudfrontCdnTemplateStackProps extends Config {
+  environment?: string;
 }
 
 export class CloudfrontCdnTemplateStack extends cdk.Stack {
@@ -28,15 +40,67 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
     const {
       bucketName,
       environment,
-      cloudfront: { comment, functionConfig, originAccessControlResourceName },
-      s3Encryption,
+      cloudfront: { comment, originAccessControl },
+      kms: kmsConfig,
     } = props;
 
-    const resolveEncryption = () => {
-      if (s3Encryption) {
-        return s3.BucketEncryption.S3_MANAGED;
+    const resolveEncryption = (): {
+      encryptionKey?: cdk.aws_kms.IKey;
+      encryption: cdk.aws_s3.BucketEncryption;
+      bucketKeyEnabled?: boolean;
+    } => {
+      if (kmsConfig) {
+        if (kmsConfig.arn || kmsConfig.alias || kmsConfig.createKey) {
+          const encryption = {
+            encryption: s3.BucketEncryption.KMS,
+            bucketKeyEnabled: true,
+          };
+          if (kmsConfig.arn) {
+            const encryptionKey = kms.Key.fromKeyArn(
+              this,
+              'KMSKey',
+              kmsConfig.arn,
+            );
+            return { ...encryption, encryptionKey };
+          }
+          if (kmsConfig.createKey) {
+            const encryptionKey = new kms.Key(this, 'KMSKey', {
+              alias: kmsConfig.alias,
+              enableKeyRotation: true,
+              description: `Created by ${this.stackName}`,
+              policy: new iam.PolicyDocument({
+                statements: [
+                  new iam.PolicyStatement({
+                    sid: 'defaultPolicy',
+                    principals: [new iam.AccountRootPrincipal()],
+                    effect: iam.Effect.ALLOW,
+                    actions: ['kms:*'],
+                    resources: ['*'],
+                  }),
+                ],
+              }),
+            });
+            return { ...encryption, encryptionKey };
+          }
+          if (kmsConfig.alias) {
+            const alias = kms.Alias.fromAliasName(
+              this,
+              'KMSKeyAlias',
+              kmsConfig.alias,
+            );
+            const encryptionKey = kms.Key.fromKeyArn(
+              this,
+              'KMSKey',
+              alias.keyArn,
+            );
+
+            return { ...encryption, encryptionKey };
+          }
+
+          return encryption;
+        }
       }
-      return undefined;
+      return { encryption: s3.BucketEncryption.S3_MANAGED };
     };
 
     const encryption = resolveEncryption();
@@ -48,46 +112,43 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       autoDeleteObjects: true,
       accessControl: s3.BucketAccessControl.PRIVATE,
       publicReadAccess: false,
-      websiteIndexDocument: !functionConfig ? 'index.html': undefined,
-      encryption,
+      websiteIndexDocument: !originAccessControl ? 'index.html' : undefined,
+      ...encryption,
     });
 
     // CloudFront Functionリソースの定義
     const functionAssociationsResolver = () => {
-      if (functionConfig) {
-        const functionName = environment ? `${environment}-${functionConfig.functionName}` : functionConfig.functionName;
-        const websiteIndexPageForwardFunction = new cloudfront.Function(
-          this,
-          'WebsiteIndexPageForwardFunction',
-          {
-            functionName,
-            code: cloudfront.FunctionCode.fromFile({
-              filePath: 'function/index.js',
-            }),
-          },
-        );
+      if (originAccessControl) {
+        const { functionConfig } = originAccessControl;
+        compileBundles();
+
+        const functionName = environment
+          ? `${environment}-${functionConfig.name}`
+          : functionConfig.name;
+        const websiteIndexPageForwardFunction = functionConfig.arn
+          ? cloudfront.Function.fromFunctionAttributes(
+              this,
+              'WebsiteIndexPageForwardFunction',
+              {
+                functionName,
+                functionArn: functionConfig.arn,
+              },
+            )
+          : new cloudfront.Function(this, 'WebsiteIndexPageForwardFunction', {
+              functionName,
+              code: cloudfront.FunctionCode.fromFile({
+                filePath: 'function/index.js',
+              }),
+            });
         return [
           {
             eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
             function: websiteIndexPageForwardFunction,
           },
-        ]
+        ];
       }
       return [];
     };
-
-    const oac = new cloudfront.CfnOriginAccessControl(
-      this,
-      'OriginAccessControl',
-      {
-        originAccessControlConfig: {
-          name: originAccessControlResourceName,
-          originAccessControlOriginType: 's3',
-          signingBehavior: 'no-override',
-          signingProtocol: 'sigv4',
-        },
-      },
-    );
 
     const cf = new cloudfront.CloudFrontWebDistribution(this, 'CloudFront', {
       comment,
@@ -128,19 +189,85 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       }),
     );
 
+    if (encryption.encryptionKey) {
+      if (kmsConfig?.createKey) {
+        encryption.encryptionKey.addToResourcePolicy(
+          new iam.PolicyStatement({
+            sid: 'AllowCloudFrontServicePrincipalSSE-KMS',
+            effect: iam.Effect.ALLOW,
+            principals: [new iam.ServicePrincipal('cloudfront.amazonaws.com')],
+            actions: ['kms:Decrypt', 'kms:Encrypt', 'kms:GenerateDataKey*'],
+            resources: ['*'],
+            conditions: {
+              StringLike: {
+                'AWS:SourceArn': `arn:aws:cloudfront::${this.account}:distribution/*`,
+              },
+            },
+          }),
+        );
+      }
+    }
+
+    if (!(kmsConfig?.arn || kmsConfig?.alias)) {
+      s3bucket.addToResourcePolicy(
+        new iam.PolicyStatement({
+          sid: 'DenyUnEncryptedObjectUploads',
+          effect: iam.Effect.ALLOW,
+          principals: [new iam.StarPrincipal()],
+          actions: ['s3:PutObject'],
+          resources: [`${s3bucket.bucketArn}/*`],
+          conditions: {
+            StringEquals: {
+              's3:x-amz-server-side-encryption': 'aws:kms',
+            },
+          },
+        }),
+      );
+    } else if (encryption.encryptionKey) {
+      s3bucket.addToResourcePolicy(
+        new iam.PolicyStatement({
+          sid: 'DenyUnEncryptedObjectUploads',
+          effect: iam.Effect.ALLOW,
+          principals: [new iam.StarPrincipal()],
+          actions: ['s3:PutObject'],
+          resources: [`${s3bucket.bucketArn}/*`],
+          conditions: {
+            StringEquals: {
+              's3:x-amz-server-side-encryption-aws-kms-key-id':
+                encryption.encryptionKey.keyArn,
+            },
+          },
+        }),
+      );
+    }
+
     const cfnDistribution = cf.node.defaultChild as cloudfront.CfnDistribution;
-    cfnDistribution.addPropertyOverride(
-      'DistributionConfig.Origins.0.OriginAccessControlId',
-      oac.getAtt('Id'),
-    );
-    cfnDistribution.addPropertyOverride(
-      'DistributionConfig.Origins.0.S3OriginConfig.OriginAccessIdentity',
-      '',
-    );
+    if (originAccessControl || kmsConfig) {
+      const oac = new cloudfront.CfnOriginAccessControl(
+        this,
+        'OriginAccessControl',
+        {
+          originAccessControlConfig: {
+            name: originAccessControl!.functionConfig.name,
+            originAccessControlOriginType: 's3',
+            signingBehavior: 'no-override',
+            signingProtocol: 'sigv4',
+          },
+        },
+      );
+      cfnDistribution.addPropertyOverride(
+        'DistributionConfig.Origins.0.OriginAccessControlId',
+        oac.getAtt('Id'),
+      );
+      cfnDistribution.addPropertyOverride(
+        'DistributionConfig.Origins.0.S3OriginConfig.OriginAccessIdentity',
+        '',
+      );
+    }
 
     // eslint-disable-next-line no-new
     new cdk.CfnOutput(this, 'AccessURLOutput', {
-      value: `https://${cf.distributionDomainName}`
-    })
+      value: `https://${cf.distributionDomainName}`,
+    });
   }
 }

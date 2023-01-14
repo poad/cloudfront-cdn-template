@@ -1,21 +1,33 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { CloudfrontCdnTemplateStack, CloudfrontCdnTemplateStackProps } from '../lib/cloudfront-cdn-template-stack';
-import { compileBundles } from '../lib/process/setup';
+import {
+  CloudfrontCdnTemplateStack,
+  Config,
+} from '../lib/cloudfront-cdn-template-stack';
 
-const app = new cdk.App();
-const config = app.node.tryGetContext('config');
-
-const env = app.node.tryGetContext('env');
-
-if ((config as CloudfrontCdnTemplateStackProps).cloudfront.functionConfig) {
-  compileBundles();
+function validation(config: Config) {
+  if (config.kms) {
+    if (!config.cloudfront.originAccessControl) {
+      // TODO error message
+      throw new Error('');
+    }
+    if (!(config.kms.alias || config.kms.alias || config.kms.createKey)) {
+      // TODO error message
+      throw new Error('');
+    }
+  }
 }
 
-const stackName = env ? `${env}-${config.stackName}` : config.stackName;
+const app = new cdk.App();
 
-const stack = new CloudfrontCdnTemplateStack(app, stackName, {
+const env = app.node.tryGetContext('env');
+const config = env
+  ? app.node.tryGetContext(env)
+  : app.node.tryGetContext('default');
+validation(config);
+
+const stack = new CloudfrontCdnTemplateStack(app, config.stackName, {
   ...config,
   environment: env,
   env: {
