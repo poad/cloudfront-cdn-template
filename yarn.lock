@@ -878,9 +878,9 @@ __metadata:
   linkType: hard
 
 "constructs@npm:*":
-  version: 10.1.218
-  resolution: "constructs@npm:10.1.218"
-  checksum: 571d47384c0ea80c8cba674073bb6b2d4026f257a75d6af1d61cea8fda02900a72a8607d4ca58dfe6f5b26a9e04811c534b20f3687c310c69b208d6dc9d776fd
+  version: 10.1.219
+  resolution: "constructs@npm:10.1.219"
+  checksum: fa5f2584c772b96fc5cec8d18e607446dbc4a91baa94be41280107dbb5550fc4b5eacb6d60482f3d9f28710656e6f123c47a2865c3d131f63594f74b5c1093d3
   languageName: node
   linkType: hard
 
@@ -2545,11 +2545,11 @@ __metadata:
   linkType: hard
 
 "prettier@npm:*":
-  version: 2.8.2
-  resolution: "prettier@npm:2.8.2"
+  version: 2.8.3
+  resolution: "prettier@npm:2.8.3"
   bin:
     prettier: bin-prettier.js
-  checksum: 740c56c2128d587d656ea1dde9bc9c3503dfc94db4f3ac387259215eeb2e216680bdad9d18a0c9feecc6b42cfa188d6fa777df4c36c1d00cedd4199074fbfbd2
+  checksum: 92f2ceb522d454370e02082aa74ad27388672f7cee8975028b59517c069fe643bdc73e322675c8faf2ff173d7a626d1a6389f26b474000308e793aa25fff46e5
   languageName: node
   linkType: hard
 
