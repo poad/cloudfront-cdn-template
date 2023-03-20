@@ -6,9 +6,9 @@ __metadata:
   cacheKey: 8
 
 "@aws-cdk/asset-awscli-v1@npm:^2.2.97":
-  version: 2.2.110
-  resolution: "@aws-cdk/asset-awscli-v1@npm:2.2.110"
-  checksum: eb5db70983bca7c4d91dd91c8b56921b3cfe949364c922dfd9e0644d0d7d09e86cfbd9c60a4ab491578a3b16dc89b15f3300500325009a7feb44c88bf1a65c86
+  version: 2.2.111
+  resolution: "@aws-cdk/asset-awscli-v1@npm:2.2.111"
+  checksum: 05c065b6816dadd4a7c665fbc21632f31b1a08f81684193d2619687029135f6a7c052981f6782faa87b01e2117a9b1aae6c16a57484f848f092fb5157e3a2372
   languageName: node
   linkType: hard
 
@@ -20,9 +20,9 @@ __metadata:
   linkType: hard
 
 "@aws-cdk/asset-node-proxy-agent-v5@npm:^2.0.77":
-  version: 2.0.89
-  resolution: "@aws-cdk/asset-node-proxy-agent-v5@npm:2.0.89"
-  checksum: d2e4d8744d45fe00f514d6f574220afc40cae23389a6c37997e3c158786b8fe26e5a50825f59891b4631edf4bd731fee4a09ae73f66ba424575bf4c20c7e4169
+  version: 2.0.90
+  resolution: "@aws-cdk/asset-node-proxy-agent-v5@npm:2.0.90"
+  checksum: 9140f4e4c358b20be50bc8edb4a0f419b95fd11df34f2e8b1f88060e0c685c5bff80e5a7c911673a3ad7f45c56a2f0ced95b9c7a22de14c1b3945f696b92233a
   languageName: node
   linkType: hard
 
@@ -914,9 +914,9 @@ __metadata:
   linkType: hard
 
 "constructs@npm:*":
-  version: 10.1.282
-  resolution: "constructs@npm:10.1.282"
-  checksum: 0e08a663184ab862a91274793fb255e86f3b3f23884179e1b690570896a9ef528e9460b7a01c7a54821f9d08416cc620c4939595226dbf3d6e225d348dfbf0dc
+  version: 10.1.283
+  resolution: "constructs@npm:10.1.283"
+  checksum: 468c04b1c17ca1a0058eb37197b9104dd9ecdd1fa60ff8d63a7a3cb3591f09b20a3f81da0d5f9faeea99ea059019a7ea8920cafd4ca322a4e59533f4ab7f807e
   languageName: node
   linkType: hard
 
@@ -2563,11 +2563,11 @@ __metadata:
   linkType: hard
 
 "prettier@npm:*":
-  version: 2.8.4
-  resolution: "prettier@npm:2.8.4"
+  version: 2.8.5
+  resolution: "prettier@npm:2.8.5"
   bin:
     prettier: bin-prettier.js
-  checksum: c173064bf3df57b6d93d19aa98753b9b9dd7657212e33b41ada8e2e9f9884066bb9ca0b4005b89b3ab137efffdf8fbe0b462785aba20364798ff4303aadda57e
+  checksum: b7f8d30e14061e0478bc5a59d4d889688d804c173a0daa91b1b85dc08eef5eb6956d1b59f4037770776fda5b967f6c9ca3b7a8a43c50bedb4c7b182029f865aa
   languageName: node
   linkType: hard
 
