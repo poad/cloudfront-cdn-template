@@ -720,8 +720,8 @@ __metadata:
   linkType: hard
 
 "aws-cdk-lib@npm:*":
-  version: 2.84.0
-  resolution: "aws-cdk-lib@npm:2.84.0"
+  version: 2.85.0
+  resolution: "aws-cdk-lib@npm:2.85.0"
   dependencies:
     "@aws-cdk/asset-awscli-v1": ^2.2.177
     "@aws-cdk/asset-kubectl-v20": ^2.1.1
@@ -738,7 +738,7 @@ __metadata:
     yaml: 1.10.2
   peerDependencies:
     constructs: ^10.0.0
-  checksum: fa7ecfaf4b220fd3ea1dbd982245b47164400a925a25dc8fc9542ed003ba6a13ca9527fbc4eb190dafeaddcbeae8530b411e7db102adee07b9adb0312748f9c3
+  checksum: 2bcb61a7ff78bf17bd979da81fb89997d9d2b52b9a26b6c91bba8d8d6735699a995db0272902b4262f8cda2e5edd6d3793ed5a4093497021a6f0bbd1810c43b5
   languageName: node
   linkType: hard
 
