@@ -11,6 +11,6 @@
     "fix": "prettier --write lambda bin lib && eslint --fix --ext .ts lambda bin lib"
   },
   "devDependencies": {
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.5"
   }
 }
