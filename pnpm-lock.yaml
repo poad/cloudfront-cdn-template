@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^5.60.1
     version: 5.60.1(eslint@8.43.0)(typescript@5.1.6)
   aws-cdk:
-    specifier: ^2.85.0
-    version: 2.85.0
+    specifier: ^2.86.0
+    version: 2.86.0
   eslint:
     specifier: ^8.43.0
     version: 8.43.0
@@ -622,8 +622,8 @@ packages:
       - table
       - yaml
 
-  /aws-cdk@2.85.0:
-    resolution: {integrity: sha512-duRE5rvP9Qu5iUNgA6+knHKsQ7xI6yKMUxyARTveYEzW/qDHD0RWKRu+pDbbwXLlzcr25oKGPjC3dM0ui2beKg==}
+  /aws-cdk@2.86.0:
+    resolution: {integrity: sha512-GRcdU6p00Zu3fIZYPG+EbpDYppYMtzebuf0jrmCfKhCytRGaPWDHHfu3hrv0de4d0zbUD/+AmiODPMu3J6nXbQ==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
