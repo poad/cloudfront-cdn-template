@@ -18,7 +18,7 @@
     "@types/prettier": "^2.7.3",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
-    "aws-cdk": "^2.85.0",
+    "aws-cdk": "^2.86.0",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "aws-cdk-lib": "^2.86.0",
-    "constructs": "^10.2.63",
+    "constructs": "^10.2.64",
     "source-map-support": "^0.5.21"
   }
 }

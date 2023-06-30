@@ -7,10 +7,10 @@ settings:
 dependencies:
   aws-cdk-lib:
     specifier: ^2.86.0
-    version: 2.86.0(constructs@10.2.63)
+    version: 2.86.0(constructs@10.2.64)
   constructs:
-    specifier: ^10.2.63
-    version: 10.2.63
+    specifier: ^10.2.64
+    version: 10.2.64
   source-map-support:
     specifier: ^0.5.21
     version: 0.5.21
@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^5.60.1
     version: 5.60.1(eslint@8.43.0)(typescript@5.1.6)
   aws-cdk:
-    specifier: ^2.85.0
-    version: 2.85.0
+    specifier: ^2.86.0
+    version: 2.86.0
   eslint:
     specifier: ^8.43.0
     version: 8.43.0
@@ -573,7 +573,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /aws-cdk-lib@2.86.0(constructs@10.2.63):
+  /aws-cdk-lib@2.86.0(constructs@10.2.64):
     resolution: {integrity: sha512-76yZ2MawAGXLD3ox4FjhUIPmAMXteGKkeo3tPMthemusDCCkD2X6DBssXBHjB7r9GnrOMMf8JH5BGq2lOZ539g==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
@@ -582,7 +582,7 @@ packages:
       '@aws-cdk/asset-awscli-v1': 2.2.199
       '@aws-cdk/asset-kubectl-v20': 2.1.2
       '@aws-cdk/asset-node-proxy-agent-v5': 2.0.165
-      constructs: 10.2.63
+      constructs: 10.2.64
     dev: false
     bundledDependencies:
       - '@balena/dockerignore'
@@ -596,8 +596,8 @@ packages:
       - table
       - yaml
 
-  /aws-cdk@2.85.0:
-    resolution: {integrity: sha512-duRE5rvP9Qu5iUNgA6+knHKsQ7xI6yKMUxyARTveYEzW/qDHD0RWKRu+pDbbwXLlzcr25oKGPjC3dM0ui2beKg==}
+  /aws-cdk@2.86.0:
+    resolution: {integrity: sha512-GRcdU6p00Zu3fIZYPG+EbpDYppYMtzebuf0jrmCfKhCytRGaPWDHHfu3hrv0de4d0zbUD/+AmiODPMu3J6nXbQ==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
@@ -665,8 +665,8 @@ packages:
     resolution: {integrity: sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==}
     dev: true
 
-  /constructs@10.2.63:
-    resolution: {integrity: sha512-WoQCPWTpqAJA6fLH2wFhP642ECrtFyV9Sdw5lFOsfoem/GDfQilnBSWQyJxT9cFq2yd4J1O/7oBl0GgtpZgbSg==}
+  /constructs@10.2.64:
+    resolution: {integrity: sha512-qailkROYUkrVmfVku0yTLx/xQ1QMilmZ0+MSSdKHOM4WYYHPw69uLFPlr7/7rG4QfAxJepX8gTQlmFScqO3EtQ==}
     engines: {node: '>= 16.14.0'}
     dev: false
 
@@ -1077,8 +1077,8 @@ packages:
     resolution: {integrity: sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==}
     dev: true
 
-  /fast-glob@3.2.12:
-    resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
+  /fast-glob@3.3.0:
+    resolution: {integrity: sha512-ChDuvbOypPuNjO8yIDf36x7BlZX1smcUMTTcyoIjycexOxd6DFsKsg21qVBzEmr3G7fUKIRy2/psii+CIUt7FA==}
     engines: {node: '>=8.6.0'}
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -1234,7 +1234,7 @@ packages:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.12
+      fast-glob: 3.3.0
       ignore: 5.2.4
       merge2: 1.4.1
       slash: 3.0.0
