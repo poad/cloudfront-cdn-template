@@ -86,8 +86,8 @@ packages:
     resolution: {integrity: sha512-3M2tELJOxQv0apCIiuKQ4pAbncz9GuLwnKFqxifWfe77wuMxyTRPmxssYHs42ePqzap1LT6GDcPygGs+hHstLg==}
     dev: false
 
-  /@aws-cdk/asset-node-proxy-agent-v5@2.0.165:
-    resolution: {integrity: sha512-bsyLQD/vqXQcc9RDmlM1XqiFNO/yewgVFXmkMcQkndJbmE/jgYkzewwYGrBlfL725hGLQipXq19+jwWwdsXQqg==}
+  /@aws-cdk/asset-node-proxy-agent-v5@2.0.166:
+    resolution: {integrity: sha512-j0xnccpUQHXJKPgCwQcGGNu4lRiC1PptYfdxBIH1L4dRK91iBxtSQHESRQX+yB47oGLaF/WfNN/aF3WXwlhikg==}
     dev: false
 
   /@balena/dockerignore@1.0.2:
@@ -621,7 +621,7 @@ packages:
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.200
       '@aws-cdk/asset-kubectl-v20': 2.1.2
-      '@aws-cdk/asset-node-proxy-agent-v5': 2.0.165
+      '@aws-cdk/asset-node-proxy-agent-v5': 2.0.166
       '@balena/dockerignore': 1.0.2
       case: 1.6.3
       constructs: 10.2.69
