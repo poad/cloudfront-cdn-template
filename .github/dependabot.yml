@@ -21,6 +21,10 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
+    groups:
+      cdk:
+        patterns:
+          - '*'
 
   - package-ecosystem: npm
     directory: '/function/'
@@ -32,3 +36,7 @@ updates:
     rebase-strategy: auto
     assignees:
       - poad
+    groups:
+      nextjs:
+        patterns:
+          - '*'
