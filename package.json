@@ -12,10 +12,10 @@
     "fix": "prettier --write function bin lib && eslint --fix --ext .ts function bin lib"
   },
   "devDependencies": {
-    "@types/node": "^20.8.8",
+    "@types/node": "^20.8.9",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
-    "aws-cdk": "^2.102.0",
+    "aws-cdk": "^2.103.0",
     "eslint": "^8.52.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -28,7 +28,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.102.0",
+    "aws-cdk-lib": "^2.103.0",
     "constructs": "^10.3.0",
     "source-map-support": "^0.5.21"
   }
