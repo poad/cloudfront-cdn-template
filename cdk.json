@@ -17,6 +17,8 @@
     ]
   },
   "requireApproval": "never",
+  "versionReporting": false,
+  "pathMetadata": false,
   "context": {
     "default": {
       "stackName": "cloudfront-cdn-template",
