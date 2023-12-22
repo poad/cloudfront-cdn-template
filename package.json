@@ -6,10 +6,12 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "lint": "eslint --ext .ts function bin lib",
     "style-check": "prettier --write function bin lib",
-    "format": "prettier --write function bin lib",
-    "fix": "prettier --write function bin lib && eslint --fix --ext .ts function bin lib"
+    "eslint-check": "eslint --ext .ts bin lib",
+    "style-fix": "prettier --write function bin lib",
+    "eslint-fix": "eslint --fix --ext .ts bin lib",
+    "lint-fix": "pnpm --parallel /^.*-fix$/",
+    "lint": "pnpm /^.*-check$/"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
