@@ -4,6 +4,7 @@
     "module": "ESNext",
     "lib": ["ESNext"],
     "declaration": false,
+    "moduleResolution": "node",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
