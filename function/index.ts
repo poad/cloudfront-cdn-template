@@ -6,10 +6,8 @@ interface CloudFrontRequestEvent {
   request: CroudFrontRequest;
 }
 function handler(event: CloudFrontRequestEvent) {
-  // eslint-disable-next-line no-var
-  var { request } = event;
-  // eslint-disable-next-line no-var
-  var { uri } = request;
+  const request = event.request;
+  const uri = request.uri;
 
   // Check whether the URI is missing a file name.
   if (uri.endsWith('/')) {

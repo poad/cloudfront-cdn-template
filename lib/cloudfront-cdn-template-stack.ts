@@ -140,6 +140,10 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
                 filePath: 'function/index.js',
               }),
             });
+        (
+          websiteIndexPageForwardFunction.node
+            .defaultChild as cdk.aws_cloudfront.CfnFunction
+        ).addPropertyOverride('FunctionConfig.Runtime', 'cloudfront-js-2.0');
         return [
           {
             eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
