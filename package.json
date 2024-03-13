@@ -14,7 +14,7 @@
     "lint": "pnpm /^.*-check$/"
   },
   "devDependencies": {
-    "@types/node": "^20.11.26",
+    "@types/node": "^20.11.27",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "aws-cdk": "^2.132.1",
