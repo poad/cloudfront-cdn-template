@@ -74,8 +74,8 @@ packages:
     resolution: {integrity: sha512-3M2tELJOxQv0apCIiuKQ4pAbncz9GuLwnKFqxifWfe77wuMxyTRPmxssYHs42ePqzap1LT6GDcPygGs+hHstLg==}
     dev: false
 
-  /@aws-cdk/asset-node-proxy-agent-v6@2.0.1:
-    resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
+  /@aws-cdk/asset-node-proxy-agent-v6@2.0.2:
+    resolution: {integrity: sha512-/gZ6Y2K2pUIvLoG2M0ephcT7n1JQM1ijZWQvrv5JrcYFcrAsoWy6AZEwt2MCJF7kvPPaCYIH4eJ+OOi9FKb0qQ==}
     dev: false
 
   /@cspotcode/source-map-support@0.8.1:
@@ -550,7 +550,7 @@ packages:
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.202
       '@aws-cdk/asset-kubectl-v20': 2.1.2
-      '@aws-cdk/asset-node-proxy-agent-v6': 2.0.1
+      '@aws-cdk/asset-node-proxy-agent-v6': 2.0.2
       constructs: 10.3.0
     dev: false
     bundledDependencies:
