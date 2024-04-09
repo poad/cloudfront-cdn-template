@@ -2,7 +2,6 @@ import * as childProcess from 'child_process';
 import * as fs from 'fs';
 import * as path from 'path';
 
-// eslint-disable-next-line import/prefer-default-export
 export const compileBundles = () => {
   ['function'].forEach((f) => {
     fs.readdirSync(`${process.cwd()}/${f}`, {

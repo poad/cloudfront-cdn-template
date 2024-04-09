@@ -266,7 +266,6 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
       );
     }
 
-    // eslint-disable-next-line no-new
     new cdk.CfnOutput(this, 'AccessURLOutput', {
       value: `https://${cf.distributionDomainName}`,
     });
