@@ -2,19 +2,9 @@ name: dependabot-auto-merge
 
 on:
   pull_request_target:
+    branches: [ main ]
 
-permissions:
-  actions: write
-  checks: write
-  contents: write
-  deployments: none
-  id-token: write
-  issues: none
-  packages: none
-  pull-requests: write
-  repository-projects: write
-  security-events: write
-  statuses: write
+permissions: write-all
 
 jobs:
   auto-merge:
@@ -24,15 +14,25 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
         with:
-          github-token: ${{ secrets.PERSONAL_TOKEN_FOR_GITHUB_ACTIONS }}
-          config: .github/dependabot-auto-merge.yml
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Approve & enable auto-merge for Dependabot Pull Request
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr review --approve "$PR_URL"
+          gh pr edit "$PR_URL" -t "(auto merged) $PR_TITLE"
+          gh pr merge --auto --merge "$PR_URL"
 
       - name: Slack Notification (not success)
         uses: lazy-actions/slatify@master
-        if: "! success()"
+        if: ${{ ! success() }}
         continue-on-error: true
         with:
           job_name: '*auto-merge*'
