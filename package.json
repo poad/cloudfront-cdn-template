@@ -33,6 +33,5 @@
     "aws-cdk-lib": "^2.140.0",
     "constructs": "^10.3.0",
     "source-map-support": "^0.5.21"
-  },
-  "packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
+  }
 }
