@@ -1,5 +1,5 @@
 {
-  "app": "pnpm lint && pnpm dlx ts-node --prefer-ts-exts bin/cloudfront-cdn-template.ts",
+  "app": "pnpm lint && pnpm dlx node --loader ts-node/esm bin/cloudfront-cdn-template.ts",
   "watch": {
     "include": [
       "**"

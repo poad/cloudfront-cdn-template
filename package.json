@@ -2,6 +2,7 @@
   "name": "cloudfront-cdn-template",
   "version": "0.1.0",
   "bin": "bin/cloudfront-cdn-template.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -14,7 +15,7 @@
     "lint": "pnpm /^.*-check$/"
   },
   "devDependencies": {
-    "@types/node": "^20.13.0",
+    "@types/node": "^20.14.0",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
     "aws-cdk": "^2.144.0",
