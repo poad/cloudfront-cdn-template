@@ -5,7 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 importers:
-
   .:
     devDependencies:
       typescript:
@@ -13,12 +12,13 @@ importers:
         version: 5.4.5
 
 packages:
-
   typescript@5.4.5:
-    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
-    engines: {node: '>=14.17'}
+    resolution:
+      {
+        integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==,
+      }
+    engines: { node: '>=14.17' }
     hasBin: true
 
 snapshots:
-
   typescript@5.4.5: {}
