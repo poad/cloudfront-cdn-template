@@ -4,7 +4,7 @@
   "bin": "bin/cloudfront-cdn-template.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --build --clean",
     "watch": "tsc -w",
     "cdk": "cdk",
     "style-check": "prettier --write function bin lib",
