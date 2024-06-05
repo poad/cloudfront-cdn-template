@@ -31,8 +31,8 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0(eslint@9.4.0)(typescript@5.4.5)
       '@types/node':
-        specifier: ^20.14.1
-        version: 20.14.1
+        specifier: ^20.14.2
+        version: 20.14.2
       aws-cdk:
         specifier: ^2.144.0
         version: 2.144.0
@@ -44,7 +44,7 @@ importers:
         version: 2.29.1(@typescript-eslint/parser@7.12.0(eslint@9.4.0)(typescript@5.4.5))(eslint@9.4.0)
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.14.1)(typescript@5.4.5)
+        version: 10.9.2(@types/node@20.14.2)(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -53,13 +53,13 @@ importers:
         version: 7.12.0(eslint@9.4.0)(typescript@5.4.5)
       vite:
         specifier: ^5.2.12
-        version: 5.2.12(@types/node@20.14.1)
+        version: 5.2.12(@types/node@20.14.2)
       vite-tsconfig-paths:
         specifier: ^4.3.2
-        version: 4.3.2(typescript@5.4.5)(vite@5.2.12(@types/node@20.14.1))
+        version: 4.3.2(typescript@5.4.5)(vite@5.2.12(@types/node@20.14.2))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.14.1)
+        version: 1.6.0(@types/node@20.14.2)
 
 packages:
 
@@ -410,8 +410,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@20.14.1':
-    resolution: {integrity: sha512-T2MzSGEu+ysB/FkWfqmhV3PLyQlowdptmmgD20C6QxsS8Fmv5SjpZ1ayXaEC0S21/h5UJ9iA6W/5vSNU5l00OA==}
+  '@types/node@20.14.2':
+    resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
 
   '@typescript-eslint/eslint-plugin@7.12.0':
     resolution: {integrity: sha512-7F91fcbuDf/d3S8o21+r3ZncGIke/+eWk0EpO21LXhDfLahriZF9CGj4fbAetEjlaBdjdSm9a6VeXbpbT6Z40Q==}
@@ -1119,8 +1119,8 @@ packages:
   minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
 
-  mlly@1.7.0:
-    resolution: {integrity: sha512-U9SDaXGEREBYQgfejV97coK0UL1r+qnF2SyO9A3qcI8MzKnsIFKHNVEkrDyNncQTKQQumsasmeq84eNMdBfsNQ==}
+  mlly@1.7.1:
+    resolution: {integrity: sha512-rrVRZRELyQzrIUAVMHxP97kv+G786pHmOKzuFII8zDYahFBS7qnHh2AlYSl1GAHhaMPCz6/oHjVMcfFYgFYHgA==}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -1842,7 +1842,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@20.14.1':
+  '@types/node@20.14.2':
     dependencies:
       undici-types: 5.26.5
 
@@ -2652,7 +2652,7 @@ snapshots:
 
   local-pkg@0.5.0:
     dependencies:
-      mlly: 1.7.0
+      mlly: 1.7.1
       pkg-types: 1.1.1
 
   locate-path@6.0.0:
@@ -2692,7 +2692,7 @@ snapshots:
 
   minimist@1.2.8: {}
 
-  mlly@1.7.0:
+  mlly@1.7.1:
     dependencies:
       acorn: 8.11.3
       pathe: 1.1.2
@@ -2793,7 +2793,7 @@ snapshots:
   pkg-types@1.1.1:
     dependencies:
       confbox: 0.1.7
-      mlly: 1.7.0
+      mlly: 1.7.1
       pathe: 1.1.2
 
   possible-typed-array-names@1.0.0: {}
@@ -2981,14 +2981,14 @@ snapshots:
     dependencies:
       typescript: 5.4.5
 
-  ts-node@10.9.2(@types/node@20.14.1)(typescript@5.4.5):
+  ts-node@10.9.2(@types/node@20.14.2)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.14.1
+      '@types/node': 20.14.2
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -3078,13 +3078,13 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vite-node@1.6.0(@types/node@20.14.1):
+  vite-node@1.6.0(@types/node@20.14.2):
     dependencies:
       cac: 6.7.14
       debug: 4.3.5
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.2.12(@types/node@20.14.1)
+      vite: 5.2.12(@types/node@20.14.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -3095,27 +3095,27 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.2.12(@types/node@20.14.1)):
+  vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.2.12(@types/node@20.14.2)):
     dependencies:
       debug: 4.3.5
       globrex: 0.1.2
       tsconfck: 3.1.0(typescript@5.4.5)
     optionalDependencies:
-      vite: 5.2.12(@types/node@20.14.1)
+      vite: 5.2.12(@types/node@20.14.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.2.12(@types/node@20.14.1):
+  vite@5.2.12(@types/node@20.14.2):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.18.0
     optionalDependencies:
-      '@types/node': 20.14.1
+      '@types/node': 20.14.2
       fsevents: 2.3.3
 
-  vitest@1.6.0(@types/node@20.14.1):
+  vitest@1.6.0(@types/node@20.14.2):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -3134,11 +3134,11 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.2.12(@types/node@20.14.1)
-      vite-node: 1.6.0(@types/node@20.14.1)
+      vite: 5.2.12(@types/node@20.14.2)
+      vite-node: 1.6.0(@types/node@20.14.2)
       why-is-node-running: 2.2.2
     optionalDependencies:
-      '@types/node': 20.14.1
+      '@types/node': 20.14.2
     transitivePeerDependencies:
       - less
       - lightningcss
