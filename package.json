@@ -18,7 +18,7 @@
     "@stylistic/eslint-plugin-js": "^2.2.2",
     "@stylistic/eslint-plugin-plus": "^2.2.2",
     "@stylistic/eslint-plugin-ts": "^2.2.2",
-    "@types/node": "^20.14.7",
+    "@types/node": "^20.14.8",
     "aws-cdk": "^2.147.0",
     "eslint": "^9.5.0",
     "eslint-plugin-import": "^2.29.1",
