@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       aws-cdk-lib:
-        specifier: ^2.147.1
-        version: 2.147.1(constructs@10.3.0)
+        specifier: ^2.147.2
+        version: 2.147.2(constructs@10.3.0)
       constructs:
         specifier: ^10.3.0
         version: 10.3.0
@@ -34,8 +34,8 @@ importers:
         specifier: ^20.14.9
         version: 20.14.9
       aws-cdk:
-        specifier: ^2.147.1
-        version: 2.147.1
+        specifier: ^2.147.2
+        version: 2.147.2
       eslint:
         specifier: ^9.5.0
         version: 9.5.0
@@ -52,11 +52,11 @@ importers:
         specifier: ^7.14.1
         version: 7.14.1(eslint@9.5.0)(typescript@5.5.2)
       vite:
-        specifier: ^5.3.1
-        version: 5.3.1(@types/node@20.14.9)
+        specifier: ^5.3.2
+        version: 5.3.2(@types/node@20.14.9)
       vite-tsconfig-paths:
         specifier: ^4.3.2
-        version: 4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.9))
+        version: 4.3.2(typescript@5.5.2)(vite@5.3.2(@types/node@20.14.9))
       vitest:
         specifier: ^1.6.0
         version: 1.6.0(@types/node@20.14.9)
@@ -220,8 +220,8 @@ packages:
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
 
-  '@eslint-community/regexpp@4.10.1':
-    resolution: {integrity: sha512-Zm2NGpWELsQAD1xsJzGQpYfvICSsFkEpU0jxBjfdC6uNEWXcHnfs9hScFWtXVDVl+rBQJGrl4g1vcKIejpH9dA==}
+  '@eslint-community/regexpp@4.11.0':
+    resolution: {integrity: sha512-G/M/tIiMrTAxEWRfLfQJMmGNX28IxBg4PBz8XqQhqUHLFI6TL2htpIB1iQCj144V5ee/JaKyT9/WZ0MGZWfA7A==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
   '@eslint/config-array@0.16.0':
@@ -556,8 +556,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  aws-cdk-lib@2.147.1:
-    resolution: {integrity: sha512-LQBvfq91kW2Sr94Rh07dZqfcZcd8udNpiaaoxmeGYPU1Cu7UD8cAtoYLg8XWDdqeXDPoIsZYUWCzbAVV7j+u9Q==}
+  aws-cdk-lib@2.147.2:
+    resolution: {integrity: sha512-TBx7sjxx8adL5UxsyOFaV1N9e5oAAuXuXONbLm6H/OQ2OxnV1fLFsXahwok9j9ibnVWEh0/2CyXEjZXOJ/WnuQ==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -574,8 +574,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.147.1:
-    resolution: {integrity: sha512-HKlm9j62P/JkYtdTuv0RfZrZyzxnTJwumkaHa//FAAFkZCI+gIwobaUJzlLQh+cK+0hDG98n9Yyw6dOIYgnTLQ==}
+  aws-cdk@2.147.2:
+    resolution: {integrity: sha512-mkrC47bQTPsBtHQqy0CNl+UqkRWU49l2msqM4+nW5txgRd0eW4Gzgj7XiVRAmZql3w3zmGtLfSf91maoEUrgoA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
@@ -1499,8 +1499,8 @@ packages:
       vite:
         optional: true
 
-  vite@5.3.1:
-    resolution: {integrity: sha512-XBmSKRLXLxiaPYamLv3/hnP/KXDai1NDexN0FpkTaZXTfycHvkRHoenpgl/fvuK/kPbB6xAgoyiryAhQNxYmAQ==}
+  vite@5.3.2:
+    resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1671,7 +1671,7 @@ snapshots:
       eslint: 9.5.0
       eslint-visitor-keys: 3.4.3
 
-  '@eslint-community/regexpp@4.10.1': {}
+  '@eslint-community/regexpp@4.11.0': {}
 
   '@eslint/config-array@0.16.0':
     dependencies:
@@ -1850,7 +1850,7 @@ snapshots:
 
   '@typescript-eslint/eslint-plugin@7.14.1(@typescript-eslint/parser@7.14.1(eslint@9.5.0)(typescript@5.5.2))(eslint@9.5.0)(typescript@5.5.2)':
     dependencies:
-      '@eslint-community/regexpp': 4.10.1
+      '@eslint-community/regexpp': 4.11.0
       '@typescript-eslint/parser': 7.14.1(eslint@9.5.0)(typescript@5.5.2)
       '@typescript-eslint/scope-manager': 7.14.1
       '@typescript-eslint/type-utils': 7.14.1(eslint@9.5.0)(typescript@5.5.2)
@@ -2043,14 +2043,14 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  aws-cdk-lib@2.147.1(constructs@10.3.0):
+  aws-cdk-lib@2.147.2(constructs@10.3.0):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.202
       '@aws-cdk/asset-kubectl-v20': 2.1.2
       '@aws-cdk/asset-node-proxy-agent-v6': 2.0.3
       constructs: 10.3.0
 
-  aws-cdk@2.147.1:
+  aws-cdk@2.147.2:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -2338,7 +2338,7 @@ snapshots:
   eslint@9.5.0:
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.5.0)
-      '@eslint-community/regexpp': 4.10.1
+      '@eslint-community/regexpp': 4.11.0
       '@eslint/config-array': 0.16.0
       '@eslint/eslintrc': 3.1.0
       '@eslint/js': 9.5.0
@@ -3088,7 +3088,7 @@ snapshots:
       debug: 4.3.5
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.3.1(@types/node@20.14.9)
+      vite: 5.3.2(@types/node@20.14.9)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -3099,18 +3099,18 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@4.3.2(typescript@5.5.2)(vite@5.3.1(@types/node@20.14.9)):
+  vite-tsconfig-paths@4.3.2(typescript@5.5.2)(vite@5.3.2(@types/node@20.14.9)):
     dependencies:
       debug: 4.3.5
       globrex: 0.1.2
       tsconfck: 3.1.1(typescript@5.5.2)
     optionalDependencies:
-      vite: 5.3.1(@types/node@20.14.9)
+      vite: 5.3.2(@types/node@20.14.9)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.3.1(@types/node@20.14.9):
+  vite@5.3.2(@types/node@20.14.9):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.38
@@ -3138,7 +3138,7 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.3.1(@types/node@20.14.9)
+      vite: 5.3.2(@types/node@20.14.9)
       vite-node: 1.6.0(@types/node@20.14.9)
       why-is-node-running: 2.2.2
     optionalDependencies:
