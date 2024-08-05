@@ -18,8 +18,8 @@
     "@stylistic/eslint-plugin-js": "^2.6.1",
     "@stylistic/eslint-plugin-plus": "^2.6.1",
     "@stylistic/eslint-plugin-ts": "^2.6.1",
-    "@types/node": "^22.0.3",
-    "aws-cdk": "^2.150.0",
+    "@types/node": "^22.1.0",
+    "aws-cdk": "^2.151.0",
     "eslint": "^9.8.0",
     "eslint-plugin-import": "^2.29.1",
     "ts-node": "^10.9.2",
@@ -30,7 +30,7 @@
     "vitest": "^2.0.5"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.150.0",
+    "aws-cdk-lib": "^2.151.0",
     "constructs": "^10.3.0",
     "source-map-support": "^0.5.21"
   },
