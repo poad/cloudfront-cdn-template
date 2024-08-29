@@ -14,10 +14,10 @@
     "lint": "pnpm /^.*-check$/"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2.6.4",
-    "@stylistic/eslint-plugin-js": "^2.6.4",
-    "@stylistic/eslint-plugin-plus": "^2.6.4",
-    "@stylistic/eslint-plugin-ts": "^2.6.4",
+    "@stylistic/eslint-plugin": "^2.6.5",
+    "@stylistic/eslint-plugin-js": "^2.6.5",
+    "@stylistic/eslint-plugin-plus": "^2.6.5",
+    "@stylistic/eslint-plugin-ts": "^2.6.5",
     "@types/node": "^22.5.1",
     "aws-cdk": "^2.154.1",
     "eslint": "^9.9.1",
