@@ -22,9 +22,8 @@ function validation(config: Config) {
 const app = new cdk.App();
 
 const env = app.node.tryGetContext('env');
-const config = env
-  ? app.node.tryGetContext(env)
-  : app.node.tryGetContext('default');
+const config = app.node.tryGetContext(env ?? 'default');
+
 validation(config);
 
 const stack = new CloudfrontCdnTemplateStack(app, config.stackName, {
