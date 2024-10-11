@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       aws-cdk-lib:
-        specifier: ^2.161.1
-        version: 2.161.1(constructs@10.3.0)
+        specifier: ^2.162.0
+        version: 2.162.0(constructs@10.3.1)
       constructs:
-        specifier: ^10.3.0
-        version: 10.3.0
+        specifier: ^10.3.1
+        version: 10.3.1
       source-map-support:
         specifier: ^0.5.21
         version: 0.5.21
@@ -34,8 +34,8 @@ importers:
         specifier: ^22.7.5
         version: 22.7.5
       aws-cdk:
-        specifier: ^2.161.1
-        version: 2.161.1
+        specifier: ^2.162.0
+        version: 2.162.0
       eslint:
         specifier: ^9.12.0
         version: 9.12.0
@@ -69,8 +69,8 @@ packages:
   '@aws-cdk/asset-awscli-v1@2.2.206':
     resolution: {integrity: sha512-l2eAROXoPOXNyXt3lGUEveHo/U8c0IX7RTjgf2qy1LcZw6IkUIIIy/erQ6bBqZ5SibRfFAoXSBBC+gFfGyZDcA==}
 
-  '@aws-cdk/asset-kubectl-v20@2.1.2':
-    resolution: {integrity: sha512-3M2tELJOxQv0apCIiuKQ4pAbncz9GuLwnKFqxifWfe77wuMxyTRPmxssYHs42ePqzap1LT6GDcPygGs+hHstLg==}
+  '@aws-cdk/asset-kubectl-v20@2.1.3':
+    resolution: {integrity: sha512-cDG1w3ieM6eOT9mTefRuTypk95+oyD7P5X/wRltwmYxU7nZc3+076YEVS6vrjDKr3ADYbfn0lDKpfB1FBtO9CQ==}
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0':
     resolution: {integrity: sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==}
@@ -715,8 +715,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  aws-cdk-lib@2.161.1:
-    resolution: {integrity: sha512-siVuWLRXD9AcQ2vkTPYbp/oH5KeXmx23voOkk/BcFmM9Sw+0kb1wgFWYCF2LMeFWDa+k5TuWMB0QtChN8/uz9A==}
+  aws-cdk-lib@2.162.0:
+    resolution: {integrity: sha512-Mx/8N9w+yqQONsGIFFk9Rl0JOu9nNWpU+JLlr73mHvhwxzhCT2XEZnS98UUiwuAcJYwl0c2Eh32joxj/txh3JA==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
@@ -733,8 +733,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.161.1:
-    resolution: {integrity: sha512-aMQsiCv8VxR8uyZ7EX8sWt46q/rOHeIFiIJ6pBvzKzc1nWaoI149rSxykIGGTpt0puin0L5SwYl6f6Sp3zohzg==}
+  aws-cdk@2.162.0:
+    resolution: {integrity: sha512-wuqX+qKeqJHKTDoEJtdxIQOzOcMxCxlowcqE9YMn8PiDn7NsvIgfub4Jyh8TLfLRxukaVIpNqUG1PYiSX9Y50Q==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
@@ -788,9 +788,9 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
-  constructs@10.3.0:
-    resolution: {integrity: sha512-vbK8i3rIb/xwZxSpTjz3SagHn1qq9BChLEfy5Hf6fB3/2eFbrwt2n9kHwQcS0CPTRBesreeAcsJfMq2229FnbQ==}
-    engines: {node: '>= 16.14.0'}
+  constructs@10.3.1:
+    resolution: {integrity: sha512-gTyTNR3iHOVnOk4cKPK6QHRrSZWT1nsnEMFnwLa094/w1L+CKToQel4v4oxnYHi4L07PBNm1p3Bt0WVZI4kgkg==}
+    engines: {node: '>= 18.12.0'}
 
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
@@ -1217,8 +1217,8 @@ packages:
   loupe@3.1.2:
     resolution: {integrity: sha512-23I4pFZHmAemUnz8WZXbYRSKYj801VDaNv9ETuMh7IrMc7VuVVSo+Z9iLE3ni30+U48iDWfi30d3twAXBYmnCg==}
 
-  magic-string@0.30.11:
-    resolution: {integrity: sha512-+Wri9p0QHMy+545hKww7YAu5NyzF8iomPL/RQazugQ9+Ez4Ic3mERMd8ZTX5rfK944j+560ZJi8iAwgak1Ac7A==}
+  magic-string@0.30.12:
+    resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
   make-error@1.3.6:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
@@ -1662,7 +1662,7 @@ snapshots:
 
   '@aws-cdk/asset-awscli-v1@2.2.206': {}
 
-  '@aws-cdk/asset-kubectl-v20@2.1.2': {}
+  '@aws-cdk/asset-kubectl-v20@2.1.3': {}
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0': {}
 
@@ -2076,7 +2076,7 @@ snapshots:
     dependencies:
       '@vitest/spy': 2.1.2
       estree-walker: 3.0.3
-      magic-string: 0.30.11
+      magic-string: 0.30.12
     optionalDependencies:
       vite: 5.4.8(@types/node@22.7.5)
 
@@ -2092,7 +2092,7 @@ snapshots:
   '@vitest/snapshot@2.1.2':
     dependencies:
       '@vitest/pretty-format': 2.1.2
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       pathe: 1.1.2
 
   '@vitest/spy@2.1.2':
@@ -2184,15 +2184,15 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  aws-cdk-lib@2.161.1(constructs@10.3.0):
+  aws-cdk-lib@2.162.0(constructs@10.3.1):
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.206
-      '@aws-cdk/asset-kubectl-v20': 2.1.2
+      '@aws-cdk/asset-kubectl-v20': 2.1.3
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
       '@aws-cdk/cloud-assembly-schema': 38.0.1
-      constructs: 10.3.0
+      constructs: 10.3.1
 
-  aws-cdk@2.161.1:
+  aws-cdk@2.162.0:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -2248,7 +2248,7 @@ snapshots:
 
   concat-map@0.0.1: {}
 
-  constructs@10.3.0: {}
+  constructs@10.3.1: {}
 
   create-require@1.1.1: {}
 
@@ -2791,7 +2791,7 @@ snapshots:
 
   loupe@3.1.2: {}
 
-  magic-string@0.30.11:
+  magic-string@0.30.12:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -3204,7 +3204,7 @@ snapshots:
       '@vitest/utils': 2.1.2
       chai: 5.1.1
       debug: 4.3.7
-      magic-string: 0.30.11
+      magic-string: 0.30.12
       pathe: 1.1.2
       std-env: 3.7.0
       tinybench: 2.9.0
