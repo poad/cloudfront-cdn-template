@@ -19,8 +19,6 @@ export default tseslint.config(
       'cdk.out',
       'dist',
     ],
-  },
-  {
     files: ['src/*.ts', 'src/**/*.ts'],
     plugins: {
       '@stylistic': stylistic,
