@@ -17,7 +17,7 @@
     "@stylistic/eslint-plugin-plus": "^2.12.1",
     "@stylistic/eslint-plugin-ts": "^2.12.1",
     "@types/node": "^22.10.5",
-    "aws-cdk": "^2.174.0",
+    "aws-cdk": "^2.174.1",
     "eslint": "^9.17.0",
     "eslint-plugin-import": "^2.31.0",
     "ts-node": "^10.9.2",
@@ -29,9 +29,9 @@
     "vitest": "^2.1.8"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.174.0",
+    "aws-cdk-lib": "^2.174.1",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
+  "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
 }
