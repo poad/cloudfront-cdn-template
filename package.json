@@ -12,10 +12,10 @@
     "lint-fix": "eslint --fix './{bin,lib}/**/*.ts'"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2.12.1",
-    "@stylistic/eslint-plugin-js": "^2.12.1",
-    "@stylistic/eslint-plugin-plus": "^2.12.1",
-    "@stylistic/eslint-plugin-ts": "^2.12.1",
+    "@stylistic/eslint-plugin": "^2.13.0",
+    "@stylistic/eslint-plugin-js": "^2.13.0",
+    "@stylistic/eslint-plugin-plus": "^2.13.0",
+    "@stylistic/eslint-plugin-ts": "^2.13.0",
     "@types/node": "^22.10.5",
     "aws-cdk": "^2.175.1",
     "eslint": "^9.18.0",
