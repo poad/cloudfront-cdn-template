@@ -22,17 +22,17 @@ importers:
         specifier: ^9.20.0
         version: 9.20.0
       '@stylistic/eslint-plugin':
-        specifier: ^3.0.1
-        version: 3.0.1(eslint@9.20.0)(typescript@5.7.3)
+        specifier: ^3.1.0
+        version: 3.1.0(eslint@9.20.0)(typescript@5.7.3)
       '@stylistic/eslint-plugin-js':
-        specifier: ^3.0.1
-        version: 3.0.1(eslint@9.20.0)
+        specifier: ^3.1.0
+        version: 3.1.0(eslint@9.20.0)
       '@stylistic/eslint-plugin-plus':
-        specifier: ^3.0.1
-        version: 3.0.1(eslint@9.20.0)
+        specifier: ^3.1.0
+        version: 3.1.0(eslint@9.20.0)
       '@stylistic/eslint-plugin-ts':
-        specifier: ^3.0.1
-        version: 3.0.1(eslint@9.20.0)(typescript@5.7.3)
+        specifier: ^3.1.0
+        version: 3.1.0(eslint@9.20.0)(typescript@5.7.3)
       '@types/node':
         specifier: ^22.13.1
         version: 22.13.1
@@ -78,8 +78,8 @@ packages:
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0':
     resolution: {integrity: sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==}
 
-  '@aws-cdk/cloud-assembly-schema@39.2.17':
-    resolution: {integrity: sha512-1lP3D3V8dRNg3cxCn1dOolv/e9bUiqQlhAFBLa6M7hn1NFDcothPdCNzNqG7Gj73GmWT15LIrce5U5MsBDpepQ==}
+  '@aws-cdk/cloud-assembly-schema@39.2.19':
+    resolution: {integrity: sha512-UBogkdUyMxpoEFz2Q0eEvtfS94S67D9ADuV+vDV1TA0hXPZeE0T+Qn+INr2MmWV7pfcFpkIKqzSQ7L5ftZD1CQ==}
     bundledDependencies:
       - jsonschema
       - semver
@@ -560,25 +560,25 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@stylistic/eslint-plugin-js@3.0.1':
-    resolution: {integrity: sha512-hjp6BKXSUdlY4l20pDb0EjIB5PtQDGihk2EUKCjJ5gaRVfcmMMkaIyVd/yK3oH7OLxWWBxJ8qSSo+zEdkmpnYA==}
+  '@stylistic/eslint-plugin-js@3.1.0':
+    resolution: {integrity: sha512-lQktsOiCr8S6StG29C5fzXYxLOD6ID1rp4j6TRS+E/qY1xd59Fm7dy5qm9UauJIEoSTlYx6yGsCHYh5UkgXPyg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@stylistic/eslint-plugin-plus@3.0.1':
-    resolution: {integrity: sha512-ttMbm2AeRbepViUzdDQqK4IDdsLNXTQZagNl2jr+pUBt9baMSvivMaOo4tdgQjkqUpPeUlBh3lGS8UjWZT47Jw==}
+  '@stylistic/eslint-plugin-plus@3.1.0':
+    resolution: {integrity: sha512-WKILlyHJdCETro3bBIDhrl9osCJupk6PL0dK/w66RJDJG2umdIE+tLJ6k0MqY7/HLiju9xeM3vCadnct7+f6Sw==}
     peerDependencies:
       eslint: '*'
 
-  '@stylistic/eslint-plugin-ts@3.0.1':
-    resolution: {integrity: sha512-fBPKvYhp3KPlww9lZVe2htMwQZ/uh1v1Een6G2jnRpHWoQZfZ/qIhhWge7ovBtnK0z9QBa/DhBaBqcm7ZcLYKw==}
+  '@stylistic/eslint-plugin-ts@3.1.0':
+    resolution: {integrity: sha512-ExsbaLmPTt3Y9bWN64nw+hpsnLAScLH25ncPxrV16FG2Lvg5wn6aRfMqldUGpu+YdqVmFFU1zehgFh6RIHT6YA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@stylistic/eslint-plugin@3.0.1':
-    resolution: {integrity: sha512-rQ3tcT5N2cynofJfbjUsnL4seoewTaOVBLyUEwtNldo7iNMPo3h/GUQk+Cl3iHEWwRxjq2wuH6q0FufQrbVL1A==}
+  '@stylistic/eslint-plugin@3.1.0':
+    resolution: {integrity: sha512-pA6VOrOqk0+S8toJYhQGv2MWpQQR0QpeUo9AhNkC49Y26nxBQ/nH1rta9bUU1rPw2fJ1zZEMV5oCX5AazT7J2g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -1799,7 +1799,7 @@ snapshots:
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0': {}
 
-  '@aws-cdk/cloud-assembly-schema@39.2.17': {}
+  '@aws-cdk/cloud-assembly-schema@39.2.19': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2091,19 +2091,19 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@stylistic/eslint-plugin-js@3.0.1(eslint@9.20.0)':
+  '@stylistic/eslint-plugin-js@3.1.0(eslint@9.20.0)':
     dependencies:
       eslint: 9.20.0
       eslint-visitor-keys: 4.2.0
       espree: 10.3.0
 
-  '@stylistic/eslint-plugin-plus@3.0.1(eslint@9.20.0)':
+  '@stylistic/eslint-plugin-plus@3.1.0(eslint@9.20.0)':
     dependencies:
       eslint: 9.20.0
       eslint-visitor-keys: 4.2.0
       espree: 10.3.0
 
-  '@stylistic/eslint-plugin-ts@3.0.1(eslint@9.20.0)(typescript@5.7.3)':
+  '@stylistic/eslint-plugin-ts@3.1.0(eslint@9.20.0)(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/utils': 8.23.0(eslint@9.20.0)(typescript@5.7.3)
       eslint: 9.20.0
@@ -2113,7 +2113,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@stylistic/eslint-plugin@3.0.1(eslint@9.20.0)(typescript@5.7.3)':
+  '@stylistic/eslint-plugin@3.1.0(eslint@9.20.0)(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/utils': 8.23.0(eslint@9.20.0)(typescript@5.7.3)
       eslint: 9.20.0
@@ -2345,7 +2345,7 @@ snapshots:
       '@aws-cdk/asset-awscli-v1': 2.2.222
       '@aws-cdk/asset-kubectl-v20': 2.1.4
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
-      '@aws-cdk/cloud-assembly-schema': 39.2.17
+      '@aws-cdk/cloud-assembly-schema': 39.2.19
       constructs: 10.4.2
 
   aws-cdk@2.178.1:
