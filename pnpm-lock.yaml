@@ -78,8 +78,8 @@ packages:
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0':
     resolution: {integrity: sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==}
 
-  '@aws-cdk/cloud-assembly-schema@39.2.19':
-    resolution: {integrity: sha512-UBogkdUyMxpoEFz2Q0eEvtfS94S67D9ADuV+vDV1TA0hXPZeE0T+Qn+INr2MmWV7pfcFpkIKqzSQ7L5ftZD1CQ==}
+  '@aws-cdk/cloud-assembly-schema@39.2.20':
+    resolution: {integrity: sha512-RI7S8jphGA8mak154ElnEJQPNTTV4PZmA7jgqnBBHQGyOPJIXxtACubNQ5m4YgjpkK3UJHsWT+/cOAfM/Au/Wg==}
     bundledDependencies:
       - jsonschema
       - semver
@@ -1799,7 +1799,7 @@ snapshots:
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0': {}
 
-  '@aws-cdk/cloud-assembly-schema@39.2.19': {}
+  '@aws-cdk/cloud-assembly-schema@39.2.20': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2345,7 +2345,7 @@ snapshots:
       '@aws-cdk/asset-awscli-v1': 2.2.222
       '@aws-cdk/asset-kubectl-v20': 2.1.4
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
-      '@aws-cdk/cloud-assembly-schema': 39.2.19
+      '@aws-cdk/cloud-assembly-schema': 39.2.20
       constructs: 10.4.2
 
   aws-cdk@2.178.1:
