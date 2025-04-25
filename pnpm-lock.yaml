@@ -34,7 +34,7 @@ importers:
         specifier: ^4.2.0
         version: 4.2.0(eslint@9.25.1)(typescript@5.8.3)
       '@types/node':
-        specifier: ^22.14.1
+        specifier: ^22.15.2
         version: 22.15.2
       aws-cdk:
         specifier: ^2.1012.0
@@ -58,7 +58,7 @@ importers:
         specifier: ^8.31.0
         version: 8.31.0(eslint@9.25.1)(typescript@5.8.3)
       vite:
-        specifier: ^6.3.2
+        specifier: ^6.3.3
         version: 6.3.3(@types/node@22.15.2)(tsx@4.19.3)
       vite-tsconfig-paths:
         specifier: ^5.1.4
