@@ -12,14 +12,14 @@
     "lint-fix": "eslint --fix './{bin,lib}/**/*.ts'"
   },
   "devDependencies": {
-    "@eslint/js": "^9.28.0",
+    "@eslint/js": "^9.29.0",
     "@stylistic/eslint-plugin": "^4.4.1",
     "@stylistic/eslint-plugin-js": "^4.4.1",
     "@stylistic/eslint-plugin-plus": "^4.4.1",
     "@stylistic/eslint-plugin-ts": "^4.4.1",
-    "@types/node": "^24.0.1",
+    "@types/node": "^24.0.2",
     "aws-cdk": "^2.1018.1",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "eslint-plugin-import": "^2.31.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.3",
@@ -30,7 +30,7 @@
     "vitest": "^3.2.3"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.200.2",
+    "aws-cdk-lib": "^2.201.0",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21"
   },
