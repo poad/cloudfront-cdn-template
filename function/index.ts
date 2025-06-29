@@ -5,6 +5,8 @@ interface CroudFrontRequest {
 interface CloudFrontRequestEvent {
   request: CroudFrontRequest;
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function handler(event: CloudFrontRequestEvent) {
   const request = event.request;
   const uri = request.uri;
