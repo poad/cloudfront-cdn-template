@@ -104,7 +104,7 @@ function websiteIndexPageForwardFunctionResolver(stack: cdk.Stack, functionConfi
         functionName,
         functionArn: functionConfig.arn,
       },
-    )
+    );
   }
   return new cloudfront.Function(stack, 'WebsiteIndexPageForwardFunction', {
     functionName,
@@ -157,7 +157,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
     ];
 
     const oac = new cloudfront.S3OriginAccessControl(this, 'OriginAccessControl', {
-      originAccessControlName: originAccessControl!.functionConfig.name,
+      originAccessControlName: originAccessControl.functionConfig.name,
       signing: cloudfront.Signing.SIGV4_NO_OVERRIDE,
     });
 
