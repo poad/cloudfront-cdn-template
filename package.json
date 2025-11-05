@@ -25,12 +25,12 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3",
-    "vite": "^7.1.12",
+    "vite": "^7.2.0",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^4.0.6"
+    "vitest": "^4.0.7"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.221.1",
+    "aws-cdk-lib": "^2.222.0",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21"
   },
