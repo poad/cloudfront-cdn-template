@@ -31,8 +31,8 @@ importers:
         specifier: ^24.10.1
         version: 24.10.1
       aws-cdk:
-        specifier: ^2.1032.0
-        version: 2.1032.0
+        specifier: ^2.1033.0
+        version: 2.1033.0
       eslint:
         specifier: ^9.39.1
         version: 9.39.1(jiti@2.6.1)
@@ -58,11 +58,11 @@ importers:
         specifier: ^8.47.0
         version: 8.47.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       vite:
-        specifier: ^7.2.2
-        version: 7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
+        specifier: ^7.2.4
+        version: 7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.9.3)(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6))
+        version: 5.1.4(typescript@5.9.3)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6))
       vitest:
         specifier: ^4.0.10
         version: 4.0.10(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
@@ -75,8 +75,8 @@ packages:
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0':
     resolution: {integrity: sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==}
 
-  '@aws-cdk/cloud-assembly-schema@48.19.0':
-    resolution: {integrity: sha512-jefeDhIphmb/ahwqJ+kSbfUky3EPObDg34YIqmf6LfYMeI1/17I7eh5RopD7JfMyOizkE/H4K28sKGTSYrfiWg==}
+  '@aws-cdk/cloud-assembly-schema@48.20.0':
+    resolution: {integrity: sha512-+eeiav9LY4wbF/EFuCt/vfvi/Zoxo8bf94PW5clbMraChEliq83w4TbRVy0jB9jE0v1ooFTtIjSQkowSPkfISg==}
     engines: {node: '>= 18.0.0'}
     bundledDependencies:
       - jsonschema
@@ -732,8 +732,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.1032.0:
-    resolution: {integrity: sha512-OFvTnwPrRsFklmPdTAX1li9s6yBWknVlojVy7geuBeJyMZo3aNIe6sbINYjKagRNFhacidbz2RocM7LcwQVY7w==}
+  aws-cdk@2.1033.0:
+    resolution: {integrity: sha512-Pit2k7cVAwxoYI7RMVsOyltuy7/HGENLupJ4KAm/d8mGzOfX+SLOo9YQsx5CKY9J6ErCZ1ViLerklTfjytvQww==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
 
@@ -1669,8 +1669,8 @@ packages:
       vite:
         optional: true
 
-  vite@7.2.2:
-    resolution: {integrity: sha512-BxAKBWmIbrDgrokdGZH1IgkIk/5mMHDreLDmCJ0qpyJaAteP8NvMhkwr/ZCQNqNH97bw/dANTE9PDzqwJghfMQ==}
+  vite@7.2.4:
+    resolution: {integrity: sha512-NL8jTlbo0Tn4dUEXEsUg8KeyG/Lkmc4Fnzb8JXN/Ykm9G4HNImjtABMJgkQoVjOBN/j2WAwDTRytdqJbZsah7w==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1783,7 +1783,7 @@ snapshots:
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0': {}
 
-  '@aws-cdk/cloud-assembly-schema@48.19.0': {}
+  '@aws-cdk/cloud-assembly-schema@48.20.0': {}
 
   '@emnapi/core@1.7.1':
     dependencies:
@@ -2230,13 +2230,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.10(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6))':
+  '@vitest/mocker@4.0.10(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6))':
     dependencies:
       '@vitest/spy': 4.0.10
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
+      vite: 7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
 
   '@vitest/pretty-format@4.0.10':
     dependencies:
@@ -2341,10 +2341,10 @@ snapshots:
     dependencies:
       '@aws-cdk/asset-awscli-v1': 2.2.242
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
-      '@aws-cdk/cloud-assembly-schema': 48.19.0
+      '@aws-cdk/cloud-assembly-schema': 48.20.0
       constructs: 10.4.3
 
-  aws-cdk@2.1032.0:
+  aws-cdk@2.1033.0:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -3467,18 +3467,18 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)):
+  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.9.3)
     optionalDependencies:
-      vite: 7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
+      vite: 7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6):
+  vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3495,7 +3495,7 @@ snapshots:
   vitest@4.0.10(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6):
     dependencies:
       '@vitest/expect': 4.0.10
-      '@vitest/mocker': 4.0.10(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6))
+      '@vitest/mocker': 4.0.10(vite@7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6))
       '@vitest/pretty-format': 4.0.10
       '@vitest/runner': 4.0.10
       '@vitest/snapshot': 4.0.10
@@ -3512,7 +3512,7 @@ snapshots:
       tinyexec: 0.3.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.2.2(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
+      vite: 7.2.4(@types/node@24.10.1)(jiti@2.6.1)(tsx@4.20.6)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.10.1
