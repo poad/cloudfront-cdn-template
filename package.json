@@ -26,11 +26,11 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.50.0",
     "vite": "^7.3.0",
-    "vite-tsconfig-paths": "^6.0.2",
+    "vite-tsconfig-paths": "^6.0.3",
     "vitest": "^4.0.16"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.232.2",
+    "aws-cdk-lib": "^2.233.0",
     "constructs": "^10.4.4",
     "source-map-support": "^0.5.21"
   },
