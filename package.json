@@ -34,5 +34,5 @@
     "constructs": "^10.4.4",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@10.26.1"
+  "packageManager": "pnpm@10.27.0"
 }
