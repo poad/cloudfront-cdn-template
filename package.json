@@ -30,9 +30,9 @@
     "vitest": "^4.0.18"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.237.0",
+    "aws-cdk-lib": "^2.237.1",
     "constructs": "^10.4.5",
     "source-map-support": "^0.5.21"
   },
-  "packageManager": "pnpm@10.28.1"
+  "packageManager": "pnpm@10.28.2"
 }
