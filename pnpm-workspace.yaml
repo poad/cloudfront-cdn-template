@@ -1,0 +1,5 @@
+overrides:
+  '@eslint/js': ^9
+  eslint: ^9
+  '@stylistic/eslint-plugin': '>=5.0.0'
+  '@types/node': '^24'
