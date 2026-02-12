@@ -16,7 +16,7 @@
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.8.0",
     "@types/node": "^25.2.3",
-    "aws-cdk": "^2.1105.0",
+    "aws-cdk": "^2.1106.0",
     "eslint": "^10.0.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
@@ -26,7 +26,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.55.0",
     "vite": "^7.3.1",
-    "vite-tsconfig-paths": "^6.1.0",
+    "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.0.18"
   },
   "dependencies": {
