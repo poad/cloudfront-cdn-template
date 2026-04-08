@@ -12,7 +12,7 @@
     "lint-fix": "eslint --fix"
   },
   "devDependencies": {
-    "@eslint/compat": "^2.0.4",
+    "@eslint/compat": "^2.0.5",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^25.5.2",
@@ -24,8 +24,8 @@
     "jiti": "^2.6.1",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
-    "typescript-eslint": "^8.58.0",
-    "vite": "^8.0.5",
+    "typescript-eslint": "^8.58.1",
+    "vite": "^8.0.7",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.1.3"
   },
