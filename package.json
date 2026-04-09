@@ -16,7 +16,7 @@
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^25.5.2",
-    "aws-cdk": "^2.1117.0",
+    "aws-cdk": "^2.1118.0",
     "eslint": "^10.2.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
@@ -25,9 +25,9 @@
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.58.1",
-    "vite": "^8.0.7",
+    "vite": "^8.0.8",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^4.1.3"
+    "vitest": "^4.1.4"
   },
   "dependencies": {
     "aws-cdk-lib": "^2.248.0",
