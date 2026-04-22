@@ -1,10 +1,9 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import {
   CloudfrontCdnTemplateStack,
   Config,
-} from '../lib/cloudfront-cdn-template-stack';
+} from '../lib/cloudfront-cdn-template-stack.js';
 
 function validation(config: Config) {
   if (config.kms) {
