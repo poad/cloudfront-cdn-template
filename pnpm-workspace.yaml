@@ -1,6 +1,10 @@
 packages:
   - .
 
+allowBuilds:
+  esbuild: false
+  unrs-resolver: false
+
 minimumReleaseAge: 10080 # 7 days in minutes
 minimumReleaseAgeExclude:
   - '@typescript-eslint/utils@8.59.0'
