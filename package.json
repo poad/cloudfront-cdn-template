@@ -29,7 +29,7 @@
     "vitest": "^4.1.11"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.266.0",
+    "aws-cdk-lib": "^2.267.0",
     "constructs": "^10.8.1"
   },
   "packageManager": "pnpm@11.18.0"
