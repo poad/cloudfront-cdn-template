@@ -25,11 +25,11 @@
     "tsx": "^4.23.13",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.70.0",
-    "vite": "^8.2.2",
+    "vite": "^8.3.0",
     "vitest": "^5.0.0"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.268.0",
+    "aws-cdk-lib": "^2.269.0",
     "constructs": "^10.8.1"
   },
   "packageManager": "pnpm@11.18.0"
