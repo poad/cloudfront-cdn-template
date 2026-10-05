@@ -15,7 +15,7 @@
     "@eslint/compat": "^2.1.1",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@types/node": "^26.6.2",
+    "@types/node": "^26.6.3",
     "aws-cdk": "^2.1143.0",
     "eslint": "^10.11.0",
     "eslint-import-resolver-typescript": "^4.4.5",
@@ -29,7 +29,7 @@
     "vitest": "^5.0.1"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.270.0",
+    "aws-cdk-lib": "^2.271.0",
     "constructs": "^10.8.1"
   },
   "packageManager": "pnpm@11.18.0"
