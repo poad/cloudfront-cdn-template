@@ -15,7 +15,7 @@
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^26.6.5",
-    "aws-cdk": "^2.1145.0",
+    "aws-cdk": "^2.1146.0",
     "eslint": "^10.13.0",
     "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-import": "^2.32.0",
@@ -23,7 +23,7 @@
     "jiti": "^2.7.0",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.71.2",
+    "typescript-eslint": "^8.72.0",
     "vite": "^8.3.4",
     "vitest": "^5.0.5"
   },
