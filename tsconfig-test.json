@@ -4,9 +4,5 @@
     "module": "esnext",
     "types": ["vitest/globals"]
   },
-  "include": [
-    "src",
-    "vite.config.ts",
-    "test"
-  ]
+  "include": ["src", "vite.config.ts", "test"]
 }

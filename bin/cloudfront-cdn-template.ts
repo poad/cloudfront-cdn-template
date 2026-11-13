@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
-import {
-  CloudfrontCdnTemplateStack,
-  Config,
-} from '../lib/cloudfront-cdn-template-stack.js';
+import { CloudfrontCdnTemplateStack, Config } from '../lib/cloudfront-cdn-template-stack.js';
 
 function validation(config: Config) {
   if (config.kms) {
@@ -35,9 +32,7 @@ const stack = new CloudfrontCdnTemplateStack(app, config.stackName, {
 });
 
 if (config.tags && config.tags.length > 0) {
-  config.tags.array.forEach(
-    ({ name, value }: { name: string; value: string }) => {
-      cdk.Tags.of(stack).add(name, value);
-    },
-  );
+  config.tags.array.forEach(({ name, value }: { name: string; value: string }) => {
+    cdk.Tags.of(stack).add(name, value);
+  });
 }

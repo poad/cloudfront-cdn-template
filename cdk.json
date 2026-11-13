@@ -1,9 +1,7 @@
 {
   "app": "pnpm lint && pnpm dlx tsx bin/cloudfront-cdn-template.ts",
   "watch": {
-    "include": [
-      "**"
-    ],
+    "include": ["**"],
     "exclude": [
       "README.md",
       "cdk*.json",

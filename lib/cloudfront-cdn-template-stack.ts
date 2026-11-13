@@ -1,10 +1,10 @@
 import * as cdk from 'aws-cdk-lib';
-import { Construct } from 'constructs';
-import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as kms from 'aws-cdk-lib/aws-kms';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import { Construct } from 'constructs';
 import { compileBundles } from './process/setup';
 
 export interface Config extends cdk.StackProps {
@@ -30,11 +30,14 @@ interface CloudfrontCdnTemplateStackProps extends Config {
   environment?: string;
 }
 
-function resolveEncryption(stack: cdk.Stack, kmsConfig?: {
-  arn?: string;
-  alias?: string;
-  createKey?: boolean;
-}): {
+function resolveEncryption(
+  stack: cdk.Stack,
+  kmsConfig?: {
+    arn?: string;
+    alias?: string;
+    createKey?: boolean;
+  },
+): {
   encryption: cdk.aws_s3.BucketEncryption;
   encryptionKey?: cdk.aws_kms.IKey;
 } {
@@ -45,11 +48,7 @@ function resolveEncryption(stack: cdk.Stack, kmsConfig?: {
         bucketKeyEnabled: true,
       };
       if (kmsConfig.arn) {
-        const encryptionKey = kms.Key.fromKeyArn(
-          stack,
-          'KMSKey',
-          kmsConfig.arn,
-        );
+        const encryptionKey = kms.Key.fromKeyArn(stack, 'KMSKey', kmsConfig.arn);
         return { ...encryption, encryptionKey };
       }
       if (kmsConfig.createKey) {
@@ -72,16 +71,8 @@ function resolveEncryption(stack: cdk.Stack, kmsConfig?: {
         return { ...encryption, encryptionKey };
       }
       if (kmsConfig.alias) {
-        const alias = kms.Alias.fromAliasName(
-          stack,
-          'KMSKeyAlias',
-          kmsConfig.alias,
-        );
-        const encryptionKey = kms.Key.fromKeyArn(
-          stack,
-          'KMSKey',
-          alias.keyArn,
-        );
+        const alias = kms.Alias.fromAliasName(stack, 'KMSKeyAlias', kmsConfig.alias);
+        const encryptionKey = kms.Key.fromKeyArn(stack, 'KMSKey', alias.keyArn);
 
         return { ...encryption, encryptionKey };
       }
@@ -90,21 +81,21 @@ function resolveEncryption(stack: cdk.Stack, kmsConfig?: {
     }
   }
   return { encryption: s3.BucketEncryption.S3_MANAGED };
-};
+}
 
-function websiteIndexPageForwardFunctionResolver(stack: cdk.Stack, functionConfig: {
-  name: string;
-  arn?: string;
-}, functionName: string) {
+function websiteIndexPageForwardFunctionResolver(
+  stack: cdk.Stack,
+  functionConfig: {
+    name: string;
+    arn?: string;
+  },
+  functionName: string,
+) {
   if (functionConfig.arn) {
-    return cloudfront.Function.fromFunctionAttributes(
-      stack,
-      'WebsiteIndexPageForwardFunction',
-      {
-        functionName,
-        functionArn: functionConfig.arn,
-      },
-    );
+    return cloudfront.Function.fromFunctionAttributes(stack, 'WebsiteIndexPageForwardFunction', {
+      functionName,
+      functionArn: functionConfig.arn,
+    });
   }
   return new cloudfront.Function(stack, 'WebsiteIndexPageForwardFunction', {
     functionName,
@@ -116,11 +107,7 @@ function websiteIndexPageForwardFunctionResolver(stack: cdk.Stack, functionConfi
 }
 
 export class CloudfrontCdnTemplateStack extends cdk.Stack {
-  constructor(
-    scope: Construct,
-    id: string,
-    props: CloudfrontCdnTemplateStackProps,
-  ) {
+  constructor(scope: Construct, id: string, props: CloudfrontCdnTemplateStackProps) {
     super(scope, id, props);
 
     const {
@@ -147,8 +134,14 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
     const { functionConfig } = originAccessControl;
     compileBundles();
 
-    const functionName = environment ? `${environment}-${functionConfig.name}` : functionConfig.name;
-    const websiteIndexPageForwardFunction = websiteIndexPageForwardFunctionResolver(this, functionConfig, functionName);
+    const functionName = environment
+      ? `${environment}-${functionConfig.name}`
+      : functionConfig.name;
+    const websiteIndexPageForwardFunction = websiteIndexPageForwardFunctionResolver(
+      this,
+      functionConfig,
+      functionName,
+    );
     const functionAssociations = [
       {
         eventType: cloudfront.FunctionEventType.VIEWER_REQUEST,
@@ -172,8 +165,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
         allowedMethods: cloudfront.AllowedMethods.ALLOW_GET_HEAD,
         cachePolicy: cloudfront.CachePolicy.CACHING_OPTIMIZED,
         cachedMethods: cloudfront.CachedMethods.CACHE_GET_HEAD,
-        viewerProtocolPolicy:
-          cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+        viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         // minTtl: cdk.Duration.seconds(0),
         // maxTtl: cdk.Duration.seconds(86400),
         // defaultTtl: cdk.Duration.seconds(3600),
@@ -239,8 +231,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
           resources: [`${s3bucket.bucketArn}/*`],
           conditions: {
             StringEquals: {
-              's3:x-amz-server-side-encryption-aws-kms-key-id':
-                encryption.encryptionKey.keyArn,
+              's3:x-amz-server-side-encryption-aws-kms-key-id': encryption.encryptionKey.keyArn,
             },
           },
         }),

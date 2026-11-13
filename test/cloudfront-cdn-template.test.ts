@@ -1,21 +1,17 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import * as CloudfrontCdnTemplateStackProps from '../lib/cloudfront-cdn-template-stack';
 import { test } from 'vitest';
+import * as CloudfrontCdnTemplateStackProps from '../lib/cloudfront-cdn-template-stack';
 
 test('CloudFront Created', () => {
   const app = new cdk.App();
   // WHEN
-  const stack = new CloudfrontCdnTemplateStackProps.CloudfrontCdnTemplateStack(
-    app,
-    'MyTestStack',
-    {
-      bucketName: 'test',
-      cloudfront: {
-        comment: '',
-      },
+  const stack = new CloudfrontCdnTemplateStackProps.CloudfrontCdnTemplateStack(app, 'MyTestStack', {
+    bucketName: 'test',
+    cloudfront: {
+      comment: '',
     },
-  );
+  });
   // THEN
   const template = Template.fromStack(stack);
 

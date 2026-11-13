@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "moduleResolution": "bundler",
     "declaration": true,
     "strict": true,
@@ -21,16 +18,8 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
-    "typeRoots": [
-      "./node_modules",
-      "./node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ]
+    "typeRoots": ["./node_modules", "./node_modules/@types"],
+    "types": ["node"]
   },
-  "exclude": [
-    "node_modules",
-    "cdk.out"
-  ]
+  "exclude": ["node_modules", "cdk.out"]
 }
